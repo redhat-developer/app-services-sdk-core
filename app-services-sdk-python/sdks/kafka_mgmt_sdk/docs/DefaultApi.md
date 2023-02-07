@@ -68,6 +68,7 @@ with rhoas_kafka_mgmt_sdk.ApiClient(configuration) as api_client:
         billing_cloud_account_id="billing_cloud_account_id_example",
         marketplace="marketplace_example",
         billing_model="billing_model_example",
+        cluster_id="cluster_id_example",
     ) # KafkaRequestPayload | Kafka data
 
     # example passing only required values which don't have defaults set
