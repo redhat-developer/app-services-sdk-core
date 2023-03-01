@@ -32,8 +32,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/AcsClientRequestData'
-        description: The name, redirect URIs and the organization id of the ACS managed
-          central client
+        description: "The name, redirect URIs and the organization id of the ACS managed\
+          \ central client"
         required: true
       responses:
         "201":
@@ -48,6 +48,7 @@ paths:
               examples:
                 Bad Request Example:
                   $ref: '#/components/examples/400FieldValidationError'
+                  value: null
               schema:
                 $ref: '#/components/schemas/ValidationExceptionData'
           description: All fields did not pass validation.
@@ -63,6 +64,7 @@ paths:
               examples:
                 acs tenant threshold exceeded:
                   $ref: '#/components/examples/403AcsTenantThresholdExceeded'
+                  value: null
               schema:
                 $ref: '#/components/schemas/RedHatErrorRepresentation'
           description: Exceeded maximum number of ACS managed central clients per
@@ -73,9 +75,10 @@ paths:
               examples:
                 acs api disabled:
                   $ref: '#/components/examples/405AcsApiDisabled'
+                  value: null
               schema:
                 $ref: '#/components/schemas/RedHatErrorRepresentation'
-          description: Not allowed, API Currently Disabled
+          description: "Not allowed, API Currently Disabled"
       security:
       - serviceAccounts:
         - api.iam.clients
@@ -106,6 +109,7 @@ paths:
               examples:
                 Bad Request Example:
                   $ref: '#/components/examples/400FieldValidationError'
+                  value: null
               schema:
                 $ref: '#/components/schemas/ValidationExceptionData'
           description: Bad Request if clientId is invalid
@@ -121,6 +125,7 @@ paths:
               examples:
                 client not found:
                   $ref: '#/components/examples/404AcsTenantNotFound'
+                  value: null
               schema:
                 $ref: '#/components/schemas/RedHatErrorRepresentation'
           description: Not Found
@@ -130,9 +135,10 @@ paths:
               examples:
                 acs api disabled:
                   $ref: '#/components/examples/405AcsApiDisabled'
+                  value: null
               schema:
                 $ref: '#/components/schemas/RedHatErrorRepresentation'
-          description: Not allowed, API Currently Disabled
+          description: "Not allowed, API Currently Disabled"
       security:
       - serviceAccounts:
         - api.iam.clients
@@ -252,6 +258,7 @@ paths:
               examples:
                 Bad Request Example:
                   $ref: '#/components/examples/400FieldValidationError'
+                  value: null
               schema:
                 $ref: '#/components/schemas/ValidationExceptionData'
           description: Bad Request if page filters are invalid
@@ -293,6 +300,7 @@ paths:
               examples:
                 Bad Request Example:
                   $ref: '#/components/examples/400FieldValidationError'
+                  value: null
               schema:
                 $ref: '#/components/schemas/ValidationExceptionData'
           description: All fields did not pass validation.
@@ -308,6 +316,7 @@ paths:
               examples:
                 service account threshold exceeded:
                   $ref: '#/components/examples/403ServiceAccountThresholdExceeded'
+                  value: null
               schema:
                 $ref: '#/components/schemas/RedHatErrorRepresentation'
           description: Exceeded account level threshold limits for creating service
@@ -351,6 +360,7 @@ paths:
               examples:
                 service account not found:
                   $ref: '#/components/examples/404ServiceAccountNotFound'
+                  value: null
               schema:
                 $ref: '#/components/schemas/RedHatErrorRepresentation'
           description: Not Found
@@ -394,6 +404,7 @@ paths:
               examples:
                 service account not found:
                   $ref: '#/components/examples/404ServiceAccountNotFound'
+                  value: null
               schema:
                 $ref: '#/components/schemas/RedHatErrorRepresentation'
           description: Not Found
@@ -436,6 +447,7 @@ paths:
               examples:
                 Bad Request Example:
                   $ref: '#/components/examples/400FieldValidationError'
+                  value: null
               schema:
                 $ref: '#/components/schemas/ValidationExceptionData'
           description: Bad Request
@@ -451,6 +463,7 @@ paths:
               examples:
                 service account not found:
                   $ref: '#/components/examples/404ServiceAccountNotFound'
+                  value: null
               schema:
                 $ref: '#/components/schemas/RedHatErrorRepresentation'
           description: Not Found
@@ -495,6 +508,7 @@ paths:
               examples:
                 service account not found:
                   $ref: '#/components/examples/404ServiceAccountNotFound'
+                  value: null
               schema:
                 $ref: '#/components/schemas/RedHatErrorRepresentation'
           description: Not Found
@@ -631,7 +645,7 @@ components:
           type: array
           uniqueItems: true
         orgId:
-          pattern: \d{1,10}
+          pattern: "\\d{1,10}"
           type: string
       required:
       - orgId

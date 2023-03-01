@@ -28,15 +28,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     consumerGroupId := "consumerGroupId_example" // string | Consumer group identifier
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.GroupsApi.DeleteConsumerGroupById(context.Background(), consumerGroupId).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    r, err := apiClient.GroupsApi.DeleteConsumerGroupById(context.Background(), consumerGroupId).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `GroupsApi.DeleteConsumerGroupById``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -94,7 +94,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -105,8 +105,8 @@ func main() {
     topic := "topic_example" // string | Filter consumer groups for a specific topic (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.GroupsApi.GetConsumerGroupById(context.Background(), consumerGroupId).Order(order).OrderKey(orderKey).PartitionFilter(partitionFilter).Topic(topic).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.GroupsApi.GetConsumerGroupById(context.Background(), consumerGroupId).Order(order).OrderKey(orderKey).PartitionFilter(partitionFilter).Topic(topic).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `GroupsApi.GetConsumerGroupById``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -172,7 +172,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -186,8 +186,8 @@ func main() {
     orderKey := openapiclient.ConsumerGroupOrderKey("name") // ConsumerGroupOrderKey |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.GroupsApi.GetConsumerGroups(context.Background()).Offset(offset).Limit(limit).Size(size).Page(page).Topic(topic).GroupIdFilter(groupIdFilter).Order(order).OrderKey(orderKey).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.GroupsApi.GetConsumerGroups(context.Background()).Offset(offset).Limit(limit).Size(size).Page(page).Topic(topic).GroupIdFilter(groupIdFilter).Order(order).OrderKey(orderKey).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `GroupsApi.GetConsumerGroups``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -252,7 +252,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -260,8 +260,8 @@ func main() {
     consumerGroupResetOffsetParameters := *openapiclient.NewConsumerGroupResetOffsetParameters(openapiclient.OffsetType("timestamp")) // ConsumerGroupResetOffsetParameters | 
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.GroupsApi.ResetConsumerGroupOffset(context.Background(), consumerGroupId).ConsumerGroupResetOffsetParameters(consumerGroupResetOffsetParameters).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.GroupsApi.ResetConsumerGroupOffset(context.Background(), consumerGroupId).ConsumerGroupResetOffsetParameters(consumerGroupResetOffsetParameters).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `GroupsApi.ResetConsumerGroupOffset``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 

@@ -4,9 +4,9 @@ info:
     email: rhosak-eval-support@redhat.com
     name: Red Hat Hybrid Cloud Console
     url: https://console.redhat.com/application-services/service-registry/
-  description: Service Registry Management API is a REST API for managing Service
-    Registry instances. Service Registry is a datastore for event schemas and API
-    designs, which is based on the open source Apicurio Registry project.
+  description: "Service Registry Management API is a REST API for managing Service\
+    \ Registry instances. Service Registry is a datastore for event schemas and API\
+    \ designs, which is based on the open source Apicurio Registry project."
   license:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
@@ -22,8 +22,10 @@ servers:
 - description: current domain
   url: /
 tags:
-- name: Errors
-- name: Registries
+- description: ""
+  name: Errors
+- description: ""
+  name: Registries
 paths:
   /api/serviceregistry_mgmt/v1/registries:
     description: Manage the list of all Registry instances
@@ -107,6 +109,7 @@ paths:
               examples:
                 "400Example":
                   $ref: '#/components/examples/400Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: Invalid request content or parameters.
@@ -116,6 +119,7 @@ paths:
               examples:
                 "401Example":
                   $ref: '#/components/examples/401Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Empty'
           description: Authentication was not successful. Make sure the token is valid.
@@ -125,6 +129,7 @@ paths:
               examples:
                 "403Example":
                   $ref: '#/components/examples/403Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: User is not authorized to perform the operation.
@@ -134,6 +139,7 @@ paths:
               examples:
                 "500Example":
                   $ref: '#/components/examples/500Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: Unexpected error occurred.
@@ -167,6 +173,7 @@ paths:
               examples:
                 "400Example":
                   $ref: '#/components/examples/400Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: Invalid request content or parameters.
@@ -176,6 +183,7 @@ paths:
               examples:
                 "401Example":
                   $ref: '#/components/examples/401Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Empty'
           description: Authentication was not successful. Make sure the token is valid.
@@ -185,6 +193,7 @@ paths:
               examples:
                 "403Example":
                   $ref: '#/components/examples/403Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: User is not authorized to perform the operation.
@@ -194,16 +203,19 @@ paths:
               examples:
                 "409Example":
                   $ref: '#/components/examples/409Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
-          description: Registry with the given name already exists, limit on the number
-            of instances has been reached, or other precondition has not been met.
+          description: "Registry with the given name already exists, limit on the\
+            \ number of instances has been reached, or other precondition has not\
+            \ been met."
         "415":
           content:
             application/json:
               examples:
                 "415Example":
                   $ref: '#/components/examples/415Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: Unsupported media type. The server expects a JSON request.
@@ -213,6 +225,7 @@ paths:
               examples:
                 "500Example":
                   $ref: '#/components/examples/500Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: Unexpected error occurred.
@@ -222,20 +235,21 @@ paths:
               examples:
                 "503Example":
                   $ref: '#/components/examples/503Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
-          description: Service has temporary issues while processing your request,
-            please try again.
+          description: "Service has temporary issues while processing your request,\
+            \ please try again."
       security:
       - Bearer: []
       tags:
       - Registries
   /api/serviceregistry_mgmt/v1/registries/{id}:
     delete:
-      description: 'Deletes an existing `Registry` instance and all of the data that
-        it stores. Important: Users should export the registry data before deleting
-        the instance, e.g., using the Service Registry web console, core REST API,
-        or `rhoas` CLI.'
+      description: "Deletes an existing `Registry` instance and all of the data that\
+        \ it stores. Important: Users should export the registry data before deleting\
+        \ the instance, e.g., using the Service Registry web console, core REST API,\
+        \ or `rhoas` CLI."
       operationId: deleteRegistry
       parameters:
       - description: The id of the object you wish to interact with.
@@ -255,6 +269,7 @@ paths:
               examples:
                 "401Example":
                   $ref: '#/components/examples/401Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Empty'
           description: Authentication was not successful. Make sure the token is valid.
@@ -264,6 +279,7 @@ paths:
               examples:
                 "403Example":
                   $ref: '#/components/examples/403Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: User is not authorized to perform the operation.
@@ -273,6 +289,7 @@ paths:
               examples:
                 "404Example":
                   $ref: '#/components/examples/404Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: No Service Registry instance with the specified id exists
@@ -282,6 +299,7 @@ paths:
               examples:
                 "500Example":
                   $ref: '#/components/examples/500Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: Unexpected error occurred.
@@ -316,6 +334,7 @@ paths:
               examples:
                 "401Example":
                   $ref: '#/components/examples/401Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Empty'
           description: Authentication was not successful. Make sure the token is valid.
@@ -325,6 +344,7 @@ paths:
               examples:
                 "403Example":
                   $ref: '#/components/examples/403Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: User is not authorized to perform the operation.
@@ -334,6 +354,7 @@ paths:
               examples:
                 "404Example":
                   $ref: '#/components/examples/404Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: No Service Registry instance with specified id exists.
@@ -343,6 +364,7 @@ paths:
               examples:
                 "500Example":
                   $ref: '#/components/examples/500Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: Unexpected error occurred.
@@ -379,6 +401,7 @@ paths:
               examples:
                 "401Example":
                   $ref: '#/components/examples/401Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Empty'
           description: Authentication was not successful. Make sure the token is valid.
@@ -388,6 +411,7 @@ paths:
               examples:
                 "403Example":
                   $ref: '#/components/examples/403Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: User is not authorized to perform the operation.
@@ -397,6 +421,7 @@ paths:
               examples:
                 "404Example":
                   $ref: '#/components/examples/404Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: No Service Registry with the specified id exists.
@@ -406,6 +431,7 @@ paths:
               examples:
                 "500Example":
                   $ref: '#/components/examples/500Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: Unexpected error occurred.
@@ -456,6 +482,7 @@ paths:
               examples:
                 "400Example":
                   $ref: '#/components/examples/400Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: Invalid request content or parameters.
@@ -465,6 +492,7 @@ paths:
               examples:
                 "401Example":
                   $ref: '#/components/examples/401Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Empty'
           description: Authentication was not successful. Make sure the token is valid.
@@ -474,6 +502,7 @@ paths:
               examples:
                 "403Example":
                   $ref: '#/components/examples/403Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: User is not authorized to perform the operation.
@@ -483,14 +512,15 @@ paths:
               examples:
                 "500Example":
                   $ref: '#/components/examples/500Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: Unexpected error occurred.
       tags:
       - Errors
   /api/serviceregistry_mgmt/v1/status:
-    description: Retrieves the status of resources e.g., whether we have reached maximum
-      service capacity
+    description: "Retrieves the status of resources e.g., whether we have reached\
+      \ maximum service capacity"
     get:
       description: Get the service status
       operationId: getServiceStatus
@@ -507,6 +537,7 @@ paths:
               examples:
                 "401Example":
                   $ref: '#/components/examples/401Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Empty'
           description: Authentication was not successful. Make sure the token is valid.
@@ -516,6 +547,7 @@ paths:
               examples:
                 "403Example":
                   $ref: '#/components/examples/403Example'
+                  value: null
               schema:
                 $ref: '#/components/schemas/Error'
           description: User is not authorized to perform the operation.
@@ -754,9 +786,9 @@ components:
         max_instances_reached: true
       properties:
         max_instances_reached:
-          description: Boolean property indicating if the maximum number of total
-            Registry instances have been reached, therefore creation of more instances
-            should not be allowed.
+          description: "Boolean property indicating if the maximum number of total\
+            \ Registry instances have been reached, therefore creation of more instances\
+            \ should not be allowed."
           type: boolean
       title: Root type for ServiceStatus
       type: object
@@ -772,7 +804,7 @@ components:
             within a given organization.
           maxLength: 32
           minLength: 1
-          pattern: '[a-z]([a-z0-9\-]*[a-z0-9])?'
+          pattern: "[a-z]([a-z0-9\\-]*[a-z0-9])?"
           type: string
         description:
           description: User-provided description of the new Service Registry instance.
@@ -826,6 +858,7 @@ components:
       required:
       - items
       type: object
+      example: null
     List_allOf:
       properties:
         items:
@@ -835,6 +868,7 @@ components:
       required:
       - items
       type: object
+      example: null
     Error_allOf:
       properties:
         reason:
@@ -847,6 +881,7 @@ components:
       - code
       - reason
       type: object
+      example: null
     RegistryList_allOf:
       properties:
         items:
@@ -856,6 +891,7 @@ components:
       required:
       - items
       type: object
+      example: null
     Root_type_for_Registry:
       description: Service Registry instance in a multi-tenant deployment.
       properties:
@@ -869,8 +905,8 @@ components:
           description: User-defined Registry instance name. Does not have to be unique.
           type: string
         registryDeploymentId:
-          description: Identifier of a multi-tenant deployment, where this Service
-            Registry instance resides.
+          description: "Identifier of a multi-tenant deployment, where this Service\
+            \ Registry instance resides."
           type: integer
         owner:
           description: Registry instance owner.
@@ -897,6 +933,7 @@ components:
       - updated_at
       title: Root type for Registry
       type: object
+      example: null
   securitySchemes:
     Bearer:
       bearerFormat: JWT

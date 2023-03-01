@@ -29,15 +29,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     newTopicInput := *openapiclient.NewNewTopicInput("Name_example", *openapiclient.NewTopicSettings()) // NewTopicInput | Topic to create.
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.TopicsApi.CreateTopic(context.Background()).NewTopicInput(newTopicInput).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.TopicsApi.CreateTopic(context.Background()).NewTopicInput(newTopicInput).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TopicsApi.CreateTopic``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -95,15 +95,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     topicName := "topicName_example" // string | Name of the topic to delete
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.TopicsApi.DeleteTopic(context.Background(), topicName).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    r, err := apiClient.TopicsApi.DeleteTopic(context.Background(), topicName).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TopicsApi.DeleteTopic``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -163,15 +163,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     topicName := "topicName_example" // string | Name of the topic to describe
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.TopicsApi.GetTopic(context.Background(), topicName).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.TopicsApi.GetTopic(context.Background(), topicName).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TopicsApi.GetTopic``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -233,7 +233,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -246,8 +246,8 @@ func main() {
     orderKey := openapiclient.TopicOrderKey("name") // TopicOrderKey | Order key to sort the topics by. (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.TopicsApi.GetTopics(context.Background()).Offset(offset).Limit(limit).Size(size).Filter(filter).Page(page).Order(order).OrderKey(orderKey).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.TopicsApi.GetTopics(context.Background()).Offset(offset).Limit(limit).Size(size).Filter(filter).Page(page).Order(order).OrderKey(orderKey).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TopicsApi.GetTopics``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -311,7 +311,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -319,8 +319,8 @@ func main() {
     topicSettings := *openapiclient.NewTopicSettings() // TopicSettings | 
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.TopicsApi.UpdateTopic(context.Background(), topicName).TopicSettings(topicSettings).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.TopicsApi.UpdateTopic(context.Background(), topicName).TopicSettings(topicSettings).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TopicsApi.UpdateTopic``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 

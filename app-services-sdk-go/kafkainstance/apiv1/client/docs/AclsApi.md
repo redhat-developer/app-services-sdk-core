@@ -28,15 +28,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     aclBinding := *openapiclient.NewAclBinding(openapiclient.AclResourceType("GROUP"), "ResourceName_example", openapiclient.AclPatternType("LITERAL"), "User:user-123-abc", openapiclient.AclOperation("ALL"), openapiclient.AclPermissionType("ALLOW")) // AclBinding | ACL to create.
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AclsApi.CreateAcl(context.Background()).AclBinding(aclBinding).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    r, err := apiClient.AclsApi.CreateAcl(context.Background()).AclBinding(aclBinding).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AclsApi.CreateAcl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -92,7 +92,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -104,8 +104,8 @@ func main() {
     permission := openapiclient.AclPermissionTypeFilter("ALLOW") // AclPermissionTypeFilter | ACL Permission Type Filter (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AclsApi.DeleteAcls(context.Background()).ResourceType(resourceType).ResourceName(resourceName).PatternType(patternType).Principal(principal).Operation(operation).Permission(permission).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AclsApi.DeleteAcls(context.Background()).ResourceType(resourceType).ResourceName(resourceName).PatternType(patternType).Principal(principal).Operation(operation).Permission(permission).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AclsApi.DeleteAcls``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -168,14 +168,14 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AclsApi.GetAclResourceOperations(context.Background()).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AclsApi.GetAclResourceOperations(context.Background()).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AclsApi.GetAclResourceOperations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -200,7 +200,7 @@ Other parameters are passed through a pointer to a apiGetAclResourceOperationsRe
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -229,7 +229,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -245,8 +245,8 @@ func main() {
     orderKey := openapiclient.AclBindingOrderKey("resourceType") // AclBindingOrderKey |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AclsApi.GetAcls(context.Background()).ResourceType(resourceType).ResourceName(resourceName).PatternType(patternType).Principal(principal).Operation(operation).Permission(permission).Page(page).Size(size).Order(order).OrderKey(orderKey).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AclsApi.GetAcls(context.Background()).ResourceType(resourceType).ResourceName(resourceName).PatternType(patternType).Principal(principal).Operation(operation).Permission(permission).Page(page).Size(size).Order(order).OrderKey(orderKey).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AclsApi.GetAcls``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
