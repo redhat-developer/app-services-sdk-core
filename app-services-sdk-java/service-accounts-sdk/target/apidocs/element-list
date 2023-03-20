@@ -1,0 +1,15 @@
+apis
+apis.beta
+apis.beta.acs
+apis.beta.acs.v1
+apis.beta.acs.v1.item
+apis.organizations
+apis.organizations.v1
+apis.organizations.v1.item
+apis.organizations.v1.item.authenticationpolicy
+apis.service_accounts
+apis.service_accounts.v1
+apis.service_accounts.v1.item
+apis.service_accounts.v1.item.resetsecret
+com.openshift.cloud.api.serviceaccounts
+models

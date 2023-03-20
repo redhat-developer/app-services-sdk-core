@@ -1,0 +1,78 @@
+@options
+@packages
+@argfile
+-classpath
+'/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-abstractions/0.2.1/microsoft-kiota-abstractions-0.2.1.jar:/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-json/0.2.1/microsoft-kiota-serialization-json-0.2.1.jar:/home/runner/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-text/0.2.1/microsoft-kiota-serialization-text-0.2.1.jar:/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-form/0.2.1/microsoft-kiota-serialization-form-0.2.1.jar:/home/runner/.m2/repository/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar'
+-encoding
+'UTF-8'
+-protected
+--release
+11
+-sourcepath
+'/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/generated-sources/kiota'
+-author
+-bottom
+'Copyright &#169; 2023 <a href="https://www.redhat.com">Red Hat</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'Smartevents Management SDK 999-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' '/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Smartevents Management SDK 999-SNAPSHOT API'
+models
+api
+api.smartevents_mgmt
+api.smartevents_mgmt.v2.errors
+api.smartevents_mgmt.v2.errors.item
+api.smartevents_mgmt.v2.cloud_providers
+api.smartevents_mgmt.v2.cloud_providers.item.regions
+api.smartevents_mgmt.v2.cloud_providers.item
+api.smartevents_mgmt.v2.bridges
+api.smartevents_mgmt.v2.bridges.item
+api.smartevents_mgmt.v2.bridges.item.sources.item
+api.smartevents_mgmt.v2.bridges.item.sources
+api.smartevents_mgmt.v2.bridges.item.sinks
+api.smartevents_mgmt.v2.bridges.item.sinks.item
+api.smartevents_mgmt.v2.bridges.item.processors
+api.smartevents_mgmt.v2.bridges.item.processors.item
+api.smartevents_mgmt.v2
+'/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/generated-sources/kiota/ApiClient.java'
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-abstractions/0.2.1/microsoft-kiota-abstractions-0.2.1.jar = 1679311330254
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-json/0.2.1/microsoft-kiota-serialization-json-0.2.1.jar = 1679311330302
+/home/runner/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar = 1679311330310
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-text/0.2.1/microsoft-kiota-serialization-text-0.2.1.jar = 1679311330310
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-form/0.2.1/microsoft-kiota-serialization-form-0.2.1.jar = 1679311330314
+/home/runner/.m2/repository/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar = 1679311330326
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/generated-sources/kiota/kiota-lock.json = 1679311402202
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/generated-sources/kiota/ApiClient.java = 1679311402122
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/generated-sources/kiota = 1679311402198
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/allclasses-index.html = 1679311406374
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/type-search-index.js = 1679311406362
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/index-all.html = 1679311406370
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/package-search-index.js = 1679311406362
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/jquery-ui.overrides.css = 1679311406410
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/constant-values.html = 1679311406298
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/search.js = 1679311406406
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/member-search-index.zip = 1679311406362
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/overview-summary.html = 1679311406398
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/index.html = 1679311406394
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/allclasses.html = 1679311406390
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/help-doc.html = 1679311406406
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/package-search-index.zip = 1679311406362
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/type-search-index.zip = 1679311406362
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/element-list = 1679311406234
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/script.js = 1679311406406
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/overview-tree.html = 1679311406346
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/allpackages-index.html = 1679311406378
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/member-search-index.js = 1679311406362
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/stylesheet.css = 1679311406406
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/smartevents-management-sdk/target/apidocs/deprecated-list.html = 1679311406378

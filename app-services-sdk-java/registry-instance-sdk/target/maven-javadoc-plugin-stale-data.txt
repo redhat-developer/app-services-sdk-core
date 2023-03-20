@@ -1,0 +1,107 @@
+@options
+@packages
+@argfile
+-classpath
+'/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-abstractions/0.2.1/microsoft-kiota-abstractions-0.2.1.jar:/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-json/0.2.1/microsoft-kiota-serialization-json-0.2.1.jar:/home/runner/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-text/0.2.1/microsoft-kiota-serialization-text-0.2.1.jar:/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-form/0.2.1/microsoft-kiota-serialization-form-0.2.1.jar:/home/runner/.m2/repository/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar'
+-encoding
+'UTF-8'
+-protected
+--release
+11
+-sourcepath
+'/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/generated-sources/kiota'
+-author
+-bottom
+'Copyright &#169; 2023 <a href="https://www.redhat.com">Red Hat</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'Registry Instance SDK 999-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' '/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Registry Instance SDK 999-SNAPSHOT API'
+users
+users.me
+search.artifacts
+search
+models
+admin.loggers.item
+admin.loggers
+admin
+admin.artifacttypes
+admin.export
+admin.importescaped
+admin.rolemappings.item
+admin.rolemappings
+admin.config
+admin.config.properties.item
+admin.config.properties
+admin.rules
+admin.rules.item
+system.info
+system
+system.limits
+ids.contentids
+ids.contentids.item
+ids.contentids.item.references
+ids.contenthashes
+ids.contenthashes.item
+ids.contenthashes.item.references
+ids
+ids.globalids
+ids.globalids.item
+ids.globalids.item.references
+groups
+groups.item
+groups.item.artifacts
+groups.item.artifacts.item.meta
+groups.item.artifacts.item.versions
+groups.item.artifacts.item.versions.item.meta
+groups.item.artifacts.item.versions.item.references
+groups.item.artifacts.item.versions.item.state
+groups.item.artifacts.item.versions.item
+groups.item.artifacts.item
+groups.item.artifacts.item.owner
+groups.item.artifacts.item.state
+groups.item.artifacts.item.test
+groups.item.artifacts.item.rules
+groups.item.artifacts.item.rules.item
+'/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/generated-sources/kiota/ApiClient.java'
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-abstractions/0.2.1/microsoft-kiota-abstractions-0.2.1.jar = 1679311330254
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-json/0.2.1/microsoft-kiota-serialization-json-0.2.1.jar = 1679311330302
+/home/runner/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar = 1679311330310
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-text/0.2.1/microsoft-kiota-serialization-text-0.2.1.jar = 1679311330310
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-form/0.2.1/microsoft-kiota-serialization-form-0.2.1.jar = 1679311330314
+/home/runner/.m2/repository/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar = 1679311330326
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/generated-sources/kiota/kiota-lock.json = 1679311378738
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/generated-sources/kiota/ApiClient.java = 1679311378634
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/generated-sources/kiota = 1679311378730
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/allclasses-index.html = 1679311383986
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/type-search-index.js = 1679311383974
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/index-all.html = 1679311383978
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/package-search-index.js = 1679311383974
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/jquery-ui.overrides.css = 1679311384014
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/constant-values.html = 1679311383890
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/search.js = 1679311384006
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/member-search-index.zip = 1679311383978
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/overview-summary.html = 1679311384002
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/index.html = 1679311384002
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/allclasses.html = 1679311383994
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/help-doc.html = 1679311384002
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/package-search-index.zip = 1679311383974
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/type-search-index.zip = 1679311383974
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/element-list = 1679311383726
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/script.js = 1679311384006
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/overview-tree.html = 1679311383958
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/allpackages-index.html = 1679311383990
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/member-search-index.js = 1679311383974
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/stylesheet.css = 1679311384006
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/registry-instance-sdk/target/apidocs/deprecated-list.html = 1679311383994

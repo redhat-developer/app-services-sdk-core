@@ -1,0 +1,10 @@
+api
+api.serviceregistry_mgmt
+api.serviceregistry_mgmt.v1
+api.serviceregistry_mgmt.v1.errors
+api.serviceregistry_mgmt.v1.errors.item
+api.serviceregistry_mgmt.v1.registries
+api.serviceregistry_mgmt.v1.registries.item
+api.serviceregistry_mgmt.v1.status
+com.openshift.cloud.api.srs
+models

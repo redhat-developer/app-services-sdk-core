@@ -1,0 +1,77 @@
+@options
+@packages
+@argfile
+-classpath
+'/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-abstractions/0.2.1/microsoft-kiota-abstractions-0.2.1.jar:/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-json/0.2.1/microsoft-kiota-serialization-json-0.2.1.jar:/home/runner/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-text/0.2.1/microsoft-kiota-serialization-text-0.2.1.jar:/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-form/0.2.1/microsoft-kiota-serialization-form-0.2.1.jar:/home/runner/.m2/repository/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar'
+-encoding
+'UTF-8'
+-protected
+--release
+11
+-sourcepath
+'/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/generated-sources/kiota'
+-author
+-bottom
+'Copyright &#169; 2023 <a href="https://www.redhat.com">Red Hat</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'Connector Management SDK 999-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' '/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Connector Management SDK 999-SNAPSHOT API'
+models
+api
+api.connector_mgmt.v1.kafka_connector_clusters
+api.connector_mgmt.v1.kafka_connector_clusters.item.addon_parameters
+api.connector_mgmt.v1.kafka_connector_clusters.item
+api.connector_mgmt.v1.kafka_connector_clusters.item.namespaces
+api.connector_mgmt.v1.kafka_connector_types.labels
+api.connector_mgmt.v1.kafka_connector_types.item
+api.connector_mgmt.v1.kafka_connector_types
+api.connector_mgmt.v1.kafka_connector_namespaces.eval
+api.connector_mgmt.v1.kafka_connector_namespaces.item
+api.connector_mgmt.v1.kafka_connector_namespaces
+api.connector_mgmt.v1.kafka_connectors
+api.connector_mgmt.v1.kafka_connectors.item
+api.connector_mgmt.v1
+api.connector_mgmt
+'/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/generated-sources/kiota/ApiClient.java'
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-abstractions/0.2.1/microsoft-kiota-abstractions-0.2.1.jar = 1679311330254
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-json/0.2.1/microsoft-kiota-serialization-json-0.2.1.jar = 1679311330302
+/home/runner/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar = 1679311330310
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-text/0.2.1/microsoft-kiota-serialization-text-0.2.1.jar = 1679311330310
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-form/0.2.1/microsoft-kiota-serialization-form-0.2.1.jar = 1679311330314
+/home/runner/.m2/repository/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar = 1679311330326
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/generated-sources/kiota/kiota-lock.json = 1679311353214
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/generated-sources/kiota/ApiClient.java = 1679311353178
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/generated-sources/kiota = 1679311353210
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/allclasses-index.html = 1679311358438
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/type-search-index.js = 1679311358430
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/index-all.html = 1679311358430
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/package-search-index.js = 1679311358426
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/jquery-ui.overrides.css = 1679311358478
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/constant-values.html = 1679311358362
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/search.js = 1679311358470
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/member-search-index.zip = 1679311358430
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/overview-summary.html = 1679311358458
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/index.html = 1679311358458
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/allclasses.html = 1679311358450
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/help-doc.html = 1679311358466
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/package-search-index.zip = 1679311358430
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/type-search-index.zip = 1679311358430
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/element-list = 1679311358278
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/script.js = 1679311358470
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/overview-tree.html = 1679311358414
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/allpackages-index.html = 1679311358442
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/member-search-index.js = 1679311358430
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/stylesheet.css = 1679311358470
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/connector-management-sdk/target/apidocs/deprecated-list.html = 1679311358446

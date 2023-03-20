@@ -1,0 +1,14 @@
+api
+api.v1
+api.v1.acls
+api.v1.acls.resourceoperations
+api.v1.consumergroups
+api.v1.consumergroups.item
+api.v1.consumergroups.item.resetoffset
+api.v1.errors
+api.v1.errors.item
+api.v1.topics
+api.v1.topics.item
+api.v1.topics.item.records
+com.openshift.cloud.api.kas.auth
+models

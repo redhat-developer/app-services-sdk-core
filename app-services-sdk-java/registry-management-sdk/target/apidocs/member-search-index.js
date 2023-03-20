@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.openshift.cloud.api.srs","c":"ApiClient","l":"api()"},{"p":"com.openshift.cloud.api.srs","c":"ApiClient","l":"ApiClient(RequestAdapter)","url":"%3Cinit%3E(com.microsoft.kiota.RequestAdapter)"}]

@@ -1,0 +1,87 @@
+@options
+@packages
+@argfile
+-classpath
+'/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-abstractions/0.2.1/microsoft-kiota-abstractions-0.2.1.jar:/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-json/0.2.1/microsoft-kiota-serialization-json-0.2.1.jar:/home/runner/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-text/0.2.1/microsoft-kiota-serialization-text-0.2.1.jar:/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-form/0.2.1/microsoft-kiota-serialization-form-0.2.1.jar:/home/runner/.m2/repository/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar'
+-encoding
+'UTF-8'
+-protected
+--release
+11
+-sourcepath
+'/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/generated-sources/kiota'
+-author
+-bottom
+'Copyright &#169; 2023 <a href="https://www.redhat.com">Red Hat</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'Kafka Management SDK 999-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' '/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Kafka Management SDK 999-SNAPSHOT API'
+models
+api.kafkas_mgmt.v1.service_accounts
+api.kafkas_mgmt.v1.service_accounts.item
+api.kafkas_mgmt.v1.service_accounts.item.reset_credentials
+api.kafkas_mgmt.v1.errors
+api.kafkas_mgmt.v1.errors.item
+api.kafkas_mgmt.v1.sso_providers
+api.kafkas_mgmt.v1.instance_types.item.item
+api.kafkas_mgmt.v1.instance_types.item
+api.kafkas_mgmt.v1.instance_types
+api.kafkas_mgmt.v1.clusters.item
+api.kafkas_mgmt.v1.clusters.item.addon_parameters
+api.kafkas_mgmt.v1.clusters
+api.kafkas_mgmt.v1.cloud_providers
+api.kafkas_mgmt.v1.cloud_providers.item.regions
+api.kafkas_mgmt.v1.cloud_providers.item
+api.kafkas_mgmt.v1
+api.kafkas_mgmt.v1.kafkas.item
+api.kafkas_mgmt.v1.kafkas.item.metrics.query
+api.kafkas_mgmt.v1.kafkas.item.metrics
+api.kafkas_mgmt.v1.kafkas.item.metrics.federate
+api.kafkas_mgmt.v1.kafkas.item.metrics.query_range
+api.kafkas_mgmt.v1.kafkas.item.promote
+api.kafkas_mgmt.v1.kafkas
+api.kafkas_mgmt
+api
+'/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/generated-sources/kiota/ApiClient.java'
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-abstractions/0.2.1/microsoft-kiota-abstractions-0.2.1.jar = 1679311330254
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-json/0.2.1/microsoft-kiota-serialization-json-0.2.1.jar = 1679311330302
+/home/runner/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar = 1679311330310
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-text/0.2.1/microsoft-kiota-serialization-text-0.2.1.jar = 1679311330310
+/home/runner/.m2/repository/com/microsoft/kiota/microsoft-kiota-serialization-form/0.2.1/microsoft-kiota-serialization-form-0.2.1.jar = 1679311330314
+/home/runner/.m2/repository/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar = 1679311330326
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/generated-sources/kiota/kiota-lock.json = 1679311369498
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/generated-sources/kiota/ApiClient.java = 1679311369410
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/generated-sources/kiota = 1679311369494
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/allclasses-index.html = 1679311375218
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/type-search-index.js = 1679311375210
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/index-all.html = 1679311375214
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/package-search-index.js = 1679311375206
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/jquery-ui.overrides.css = 1679311375262
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/constant-values.html = 1679311375170
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/search.js = 1679311375250
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/member-search-index.zip = 1679311375210
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/overview-summary.html = 1679311375242
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/index.html = 1679311375242
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/allclasses.html = 1679311375230
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/help-doc.html = 1679311375250
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/package-search-index.zip = 1679311375210
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/type-search-index.zip = 1679311375210
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/element-list = 1679311375058
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/script.js = 1679311375250
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/overview-tree.html = 1679311375202
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/allpackages-index.html = 1679311375226
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/member-search-index.js = 1679311375210
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/stylesheet.css = 1679311375250
+/home/runner/work/app-services-sdk-core/app-services-sdk-core/app-services-sdk-java/kafka-management-sdk/target/apidocs/deprecated-list.html = 1679311375226

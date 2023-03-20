@@ -1,0 +1,17 @@
+api
+api.connector_mgmt
+api.connector_mgmt.v1
+api.connector_mgmt.v1.kafka_connector_clusters
+api.connector_mgmt.v1.kafka_connector_clusters.item
+api.connector_mgmt.v1.kafka_connector_clusters.item.addon_parameters
+api.connector_mgmt.v1.kafka_connector_clusters.item.namespaces
+api.connector_mgmt.v1.kafka_connector_namespaces
+api.connector_mgmt.v1.kafka_connector_namespaces.eval
+api.connector_mgmt.v1.kafka_connector_namespaces.item
+api.connector_mgmt.v1.kafka_connector_types
+api.connector_mgmt.v1.kafka_connector_types.item
+api.connector_mgmt.v1.kafka_connector_types.labels
+api.connector_mgmt.v1.kafka_connectors
+api.connector_mgmt.v1.kafka_connectors.item
+com.openshift.cloud.api.connector
+models
