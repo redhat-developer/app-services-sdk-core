@@ -13,8 +13,9 @@
  */
 
 
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
-import { Configuration } from '../configuration';
+import type { Configuration } from '../configuration';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -51,17 +52,17 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication authFlow required
+            // authentication serviceAccounts required
             // oauth required
-            await setOAuthToObject(localVarHeaderParameter, "authFlow", [], configuration)
+            await setOAuthToObject(localVarHeaderParameter, "serviceAccounts", [], configuration)
 
             // authentication bearerAuth required
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
-            // authentication serviceAccounts required
+            // authentication authFlow required
             // oauth required
-            await setOAuthToObject(localVarHeaderParameter, "serviceAccounts", [], configuration)
+            await setOAuthToObject(localVarHeaderParameter, "authFlow", [], configuration)
 
 
     
@@ -98,17 +99,17 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication authFlow required
+            // authentication serviceAccounts required
             // oauth required
-            await setOAuthToObject(localVarHeaderParameter, "authFlow", [], configuration)
+            await setOAuthToObject(localVarHeaderParameter, "serviceAccounts", [], configuration)
 
             // authentication bearerAuth required
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
-            // authentication serviceAccounts required
+            // authentication authFlow required
             // oauth required
-            await setOAuthToObject(localVarHeaderParameter, "serviceAccounts", [], configuration)
+            await setOAuthToObject(localVarHeaderParameter, "authFlow", [], configuration)
 
 
     

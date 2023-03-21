@@ -27,15 +27,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     id := "id_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.CloudProvidersApi.CloudProviderAPIGetCloudProvider(context.Background(), id).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CloudProvidersApi.CloudProviderAPIGetCloudProvider(context.Background(), id).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `CloudProvidersApi.CloudProviderAPIGetCloudProvider``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -97,7 +97,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -106,8 +106,8 @@ func main() {
     size := int32(56) // int32 |  (optional) (default to 100)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.CloudProvidersApi.CloudProviderAPIListCloudProviderRegions(context.Background(), id).Page(page).Size(size).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CloudProvidersApi.CloudProviderAPIListCloudProviderRegions(context.Background(), id).Page(page).Size(size).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `CloudProvidersApi.CloudProviderAPIListCloudProviderRegions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -171,7 +171,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -179,8 +179,8 @@ func main() {
     size := int32(56) // int32 |  (optional) (default to 100)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.CloudProvidersApi.CloudProviderAPIListCloudProviders(context.Background()).Page(page).Size(size).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CloudProvidersApi.CloudProviderAPIListCloudProviders(context.Background()).Page(page).Size(size).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `CloudProvidersApi.CloudProviderAPIListCloudProviders``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)

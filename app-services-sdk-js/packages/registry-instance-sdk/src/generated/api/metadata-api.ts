@@ -13,8 +13,9 @@
  */
 
 
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
-import { Configuration } from '../configuration';
+import type { Configuration } from '../configuration';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -199,12 +200,12 @@ export const MetadataApiAxiosParamCreator = function (configuration?: Configurat
          * @summary Get artifact version metadata by content
          * @param {string} groupId The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
          * @param {string} artifactId The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
-         * @param {any} body The content of an artifact version.
+         * @param {File} body The content of an artifact version.
          * @param {boolean} [canonical] Parameter that can be set to &#x60;true&#x60; to indicate that the server should \&quot;canonicalize\&quot; the content when searching for a matching version.  Canonicalization is unique to each artifact type, but typically involves removing any extra whitespace and formatting the content in a consistent manner.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getArtifactVersionMetaDataByContent: async (groupId: string, artifactId: string, body: any, canonical?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getArtifactVersionMetaDataByContent: async (groupId: string, artifactId: string, body: File, canonical?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'groupId' is not null or undefined
             assertParamExists('getArtifactVersionMetaDataByContent', 'groupId', groupId)
             // verify required parameter 'artifactId' is not null or undefined
@@ -444,12 +445,12 @@ export const MetadataApiFp = function(configuration?: Configuration) {
          * @summary Get artifact version metadata by content
          * @param {string} groupId The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
          * @param {string} artifactId The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
-         * @param {any} body The content of an artifact version.
+         * @param {File} body The content of an artifact version.
          * @param {boolean} [canonical] Parameter that can be set to &#x60;true&#x60; to indicate that the server should \&quot;canonicalize\&quot; the content when searching for a matching version.  Canonicalization is unique to each artifact type, but typically involves removing any extra whitespace and formatting the content in a consistent manner.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getArtifactVersionMetaDataByContent(groupId: string, artifactId: string, body: any, canonical?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VersionMetaData>> {
+        async getArtifactVersionMetaDataByContent(groupId: string, artifactId: string, body: File, canonical?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VersionMetaData>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getArtifactVersionMetaDataByContent(groupId, artifactId, body, canonical, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -554,12 +555,12 @@ export const MetadataApiFactory = function (configuration?: Configuration, baseP
          * @summary Get artifact version metadata by content
          * @param {string} groupId The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
          * @param {string} artifactId The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
-         * @param {any} body The content of an artifact version.
+         * @param {File} body The content of an artifact version.
          * @param {boolean} [canonical] Parameter that can be set to &#x60;true&#x60; to indicate that the server should \&quot;canonicalize\&quot; the content when searching for a matching version.  Canonicalization is unique to each artifact type, but typically involves removing any extra whitespace and formatting the content in a consistent manner.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getArtifactVersionMetaDataByContent(groupId: string, artifactId: string, body: any, canonical?: boolean, options?: any): AxiosPromise<VersionMetaData> {
+        getArtifactVersionMetaDataByContent(groupId: string, artifactId: string, body: File, canonical?: boolean, options?: any): AxiosPromise<VersionMetaData> {
             return localVarFp.getArtifactVersionMetaDataByContent(groupId, artifactId, body, canonical, options).then((request) => request(axios, basePath));
         },
         /**
@@ -659,13 +660,13 @@ export interface MetadataApiInterface {
      * @summary Get artifact version metadata by content
      * @param {string} groupId The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
      * @param {string} artifactId The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
-     * @param {any} body The content of an artifact version.
+     * @param {File} body The content of an artifact version.
      * @param {boolean} [canonical] Parameter that can be set to &#x60;true&#x60; to indicate that the server should \&quot;canonicalize\&quot; the content when searching for a matching version.  Canonicalization is unique to each artifact type, but typically involves removing any extra whitespace and formatting the content in a consistent manner.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MetadataApiInterface
      */
-    getArtifactVersionMetaDataByContent(groupId: string, artifactId: string, body: any, canonical?: boolean, options?: AxiosRequestConfig): AxiosPromise<VersionMetaData>;
+    getArtifactVersionMetaDataByContent(groupId: string, artifactId: string, body: File, canonical?: boolean, options?: AxiosRequestConfig): AxiosPromise<VersionMetaData>;
 
     /**
      * Updates the editable parts of the artifact\'s metadata.  Not all metadata fields can be updated.  For example, `createdOn` and `createdBy` are both read-only properties.  This operation can fail for the following reasons:  * No artifact with the `artifactId` exists (HTTP error `404`) * A server error occurred (HTTP error `500`)
@@ -772,13 +773,13 @@ export class MetadataApi extends BaseAPI implements MetadataApiInterface {
      * @summary Get artifact version metadata by content
      * @param {string} groupId The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
      * @param {string} artifactId The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
-     * @param {any} body The content of an artifact version.
+     * @param {File} body The content of an artifact version.
      * @param {boolean} [canonical] Parameter that can be set to &#x60;true&#x60; to indicate that the server should \&quot;canonicalize\&quot; the content when searching for a matching version.  Canonicalization is unique to each artifact type, but typically involves removing any extra whitespace and formatting the content in a consistent manner.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MetadataApi
      */
-    public getArtifactVersionMetaDataByContent(groupId: string, artifactId: string, body: any, canonical?: boolean, options?: AxiosRequestConfig) {
+    public getArtifactVersionMetaDataByContent(groupId: string, artifactId: string, body: File, canonical?: boolean, options?: AxiosRequestConfig) {
         return MetadataApiFp(this.configuration).getArtifactVersionMetaDataByContent(groupId, artifactId, body, canonical, options).then((request) => request(this.axios, this.basePath));
     }
 

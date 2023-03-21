@@ -54,6 +54,7 @@ model/service-account.ts
 model/sso-provider-all-of.ts
 model/sso-provider.ts
 model/supported-kafka-billing-model.ts
+model/supported-kafka-instance-type-sizes-inner.ts
 model/supported-kafka-instance-type.ts
 model/supported-kafka-instance-types-list-all-of.ts
 model/supported-kafka-instance-types-list.ts
@@ -62,3 +63,4 @@ model/supported-kafka-size.ts
 model/values.ts
 model/version-metadata-all-of.ts
 model/version-metadata.ts
+tsconfig.esm.json

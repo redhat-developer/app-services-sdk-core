@@ -31,7 +31,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -40,8 +40,8 @@ func main() {
     rule := *openapiclient.NewRule("Config_example") // Rule | 
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ArtifactRulesApi.CreateArtifactRule(context.Background(), groupId, artifactId).Rule(rule).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    r, err := apiClient.ArtifactRulesApi.CreateArtifactRule(context.Background(), groupId, artifactId).Rule(rule).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ArtifactRulesApi.CreateArtifactRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -104,7 +104,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -113,8 +113,8 @@ func main() {
     rule := "rule_example" // string | The unique name/type of a rule.
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ArtifactRulesApi.DeleteArtifactRule(context.Background(), groupId, artifactId, rule).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    r, err := apiClient.ArtifactRulesApi.DeleteArtifactRule(context.Background(), groupId, artifactId, rule).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ArtifactRulesApi.DeleteArtifactRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -178,7 +178,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -186,8 +186,8 @@ func main() {
     artifactId := "artifactId_example" // string | The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ArtifactRulesApi.DeleteArtifactRules(context.Background(), groupId, artifactId).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    r, err := apiClient.ArtifactRulesApi.DeleteArtifactRules(context.Background(), groupId, artifactId).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ArtifactRulesApi.DeleteArtifactRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -249,7 +249,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -258,8 +258,8 @@ func main() {
     rule := "rule_example" // string | The unique name/type of a rule.
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ArtifactRulesApi.GetArtifactRuleConfig(context.Background(), groupId, artifactId, rule).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ArtifactRulesApi.GetArtifactRuleConfig(context.Background(), groupId, artifactId, rule).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ArtifactRulesApi.GetArtifactRuleConfig``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -325,7 +325,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -333,8 +333,8 @@ func main() {
     artifactId := "artifactId_example" // string | The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ArtifactRulesApi.ListArtifactRules(context.Background(), groupId, artifactId).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ArtifactRulesApi.ListArtifactRules(context.Background(), groupId, artifactId).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ArtifactRulesApi.ListArtifactRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -398,7 +398,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -407,8 +407,8 @@ func main() {
     body := os.NewFile(1234, "some_file") // *os.File | The content of the artifact being tested. This is often, but not always, JSON data representing one of the supported artifact types:  * Avro (`AVRO`) * Protobuf (`PROTOBUF`) * JSON Schema (`JSON`) * Kafka Connect (`KCONNECT`) * OpenAPI (`OPENAPI`) * AsyncAPI (`ASYNCAPI`) * GraphQL (`GRAPHQL`) * Web Services Description Language (`WSDL`) * XML Schema (`XSD`) 
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ArtifactRulesApi.TestUpdateArtifact(context.Background(), groupId, artifactId).Body(body).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    r, err := apiClient.ArtifactRulesApi.TestUpdateArtifact(context.Background(), groupId, artifactId).Body(body).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ArtifactRulesApi.TestUpdateArtifact``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -471,7 +471,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -481,8 +481,8 @@ func main() {
     rule2 := *openapiclient.NewRule("Config_example") // Rule | 
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ArtifactRulesApi.UpdateArtifactRuleConfig(context.Background(), groupId, artifactId, rule).Rule2(rule2).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ArtifactRulesApi.UpdateArtifactRuleConfig(context.Background(), groupId, artifactId, rule).Rule2(rule2).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ArtifactRulesApi.UpdateArtifactRuleConfig``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)

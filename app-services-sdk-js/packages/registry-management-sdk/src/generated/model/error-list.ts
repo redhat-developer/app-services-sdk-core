@@ -13,7 +13,11 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
 import { AbstractList } from './abstract-list';
+// May contain unused imports in some cases
+// @ts-ignore
 import { ErrorListAllOf } from './error-list-all-of';
 
 /**

@@ -13,8 +13,14 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
 import { AbstractList } from './abstract-list';
+// May contain unused imports in some cases
+// @ts-ignore
 import { Registry } from './registry';
+// May contain unused imports in some cases
+// @ts-ignore
 import { RegistryListAllOf } from './registry-list-all-of';
 
 /**

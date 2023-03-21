@@ -13,8 +13,9 @@
  */
 
 
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
-import { Configuration } from '../configuration';
+import type { Configuration } from '../configuration';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -58,13 +59,13 @@ export const ServiceAccountsApiAxiosParamCreator = function (configuration?: Con
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication authFlow required
-            // oauth required
-            await setOAuthToObject(localVarHeaderParameter, "authFlow", ["api.iam.service_accounts"], configuration)
-
             // authentication serviceAccounts required
             // oauth required
             await setOAuthToObject(localVarHeaderParameter, "serviceAccounts", ["api.iam.service_accounts"], configuration)
+
+            // authentication authFlow required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "authFlow", ["api.iam.service_accounts"], configuration)
 
 
     
@@ -103,13 +104,13 @@ export const ServiceAccountsApiAxiosParamCreator = function (configuration?: Con
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication authFlow required
-            // oauth required
-            await setOAuthToObject(localVarHeaderParameter, "authFlow", ["api.iam.service_accounts"], configuration)
-
             // authentication serviceAccounts required
             // oauth required
             await setOAuthToObject(localVarHeaderParameter, "serviceAccounts", ["api.iam.service_accounts"], configuration)
+
+            // authentication authFlow required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "authFlow", ["api.iam.service_accounts"], configuration)
 
 
     
@@ -145,13 +146,13 @@ export const ServiceAccountsApiAxiosParamCreator = function (configuration?: Con
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication authFlow required
-            // oauth required
-            await setOAuthToObject(localVarHeaderParameter, "authFlow", ["api.iam.service_accounts"], configuration)
-
             // authentication serviceAccounts required
             // oauth required
             await setOAuthToObject(localVarHeaderParameter, "serviceAccounts", ["api.iam.service_accounts"], configuration)
+
+            // authentication authFlow required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "authFlow", ["api.iam.service_accounts"], configuration)
 
 
     
@@ -186,13 +187,13 @@ export const ServiceAccountsApiAxiosParamCreator = function (configuration?: Con
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication authFlow required
-            // oauth required
-            await setOAuthToObject(localVarHeaderParameter, "authFlow", ["api.iam.service_accounts"], configuration)
-
             // authentication serviceAccounts required
             // oauth required
             await setOAuthToObject(localVarHeaderParameter, "serviceAccounts", ["api.iam.service_accounts"], configuration)
+
+            // authentication authFlow required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "authFlow", ["api.iam.service_accounts"], configuration)
 
             if (first !== undefined) {
                 localVarQueryParameter['first'] = first;
@@ -240,13 +241,13 @@ export const ServiceAccountsApiAxiosParamCreator = function (configuration?: Con
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication authFlow required
-            // oauth required
-            await setOAuthToObject(localVarHeaderParameter, "authFlow", ["api.iam.service_accounts"], configuration)
-
             // authentication serviceAccounts required
             // oauth required
             await setOAuthToObject(localVarHeaderParameter, "serviceAccounts", ["api.iam.service_accounts"], configuration)
+
+            // authentication authFlow required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "authFlow", ["api.iam.service_accounts"], configuration)
 
 
     
@@ -285,13 +286,13 @@ export const ServiceAccountsApiAxiosParamCreator = function (configuration?: Con
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication authFlow required
-            // oauth required
-            await setOAuthToObject(localVarHeaderParameter, "authFlow", ["api.iam.service_accounts"], configuration)
-
             // authentication serviceAccounts required
             // oauth required
             await setOAuthToObject(localVarHeaderParameter, "serviceAccounts", ["api.iam.service_accounts"], configuration)
+
+            // authentication authFlow required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "authFlow", ["api.iam.service_accounts"], configuration)
 
 
     

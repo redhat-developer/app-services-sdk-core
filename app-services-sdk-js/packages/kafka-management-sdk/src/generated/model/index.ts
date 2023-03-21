@@ -45,6 +45,7 @@ export * from './sso-provider';
 export * from './sso-provider-all-of';
 export * from './supported-kafka-billing-model';
 export * from './supported-kafka-instance-type';
+export * from './supported-kafka-instance-type-sizes-inner';
 export * from './supported-kafka-instance-types-list';
 export * from './supported-kafka-instance-types-list-all-of';
 export * from './supported-kafka-size';

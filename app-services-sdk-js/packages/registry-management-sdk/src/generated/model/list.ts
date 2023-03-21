@@ -13,8 +13,14 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
 import { AbstractList } from './abstract-list';
+// May contain unused imports in some cases
+// @ts-ignore
 import { ListAllOf } from './list-all-of';
+// May contain unused imports in some cases
+// @ts-ignore
 import { ObjectReference } from './object-reference';
 
 /**

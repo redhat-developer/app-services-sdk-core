@@ -13,8 +13,9 @@
  */
 
 
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
-import { Configuration } from '../configuration';
+import type { Configuration } from '../configuration';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -43,7 +44,7 @@ export const VersionsApiAxiosParamCreator = function (configuration?: Configurat
          * @summary Create artifact version
          * @param {string} groupId The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
          * @param {string} artifactId The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
-         * @param {any} body The content of the artifact version being created or the content and a set of references to other artifacts. This is often, but not always, JSON data representing one of the supported artifact types:  * Avro (&#x60;AVRO&#x60;) * Protobuf (&#x60;PROTOBUF&#x60;) * JSON Schema (&#x60;JSON&#x60;) * Kafka Connect (&#x60;KCONNECT&#x60;) * OpenAPI (&#x60;OPENAPI&#x60;) * AsyncAPI (&#x60;ASYNCAPI&#x60;) * GraphQL (&#x60;GRAPHQL&#x60;) * Web Services Description Language (&#x60;WSDL&#x60;) * XML Schema (&#x60;XSD&#x60;) 
+         * @param {File} body The content of the artifact version being created or the content and a set of references to other artifacts. This is often, but not always, JSON data representing one of the supported artifact types:  * Avro (&#x60;AVRO&#x60;) * Protobuf (&#x60;PROTOBUF&#x60;) * JSON Schema (&#x60;JSON&#x60;) * Kafka Connect (&#x60;KCONNECT&#x60;) * OpenAPI (&#x60;OPENAPI&#x60;) * AsyncAPI (&#x60;ASYNCAPI&#x60;) * GraphQL (&#x60;GRAPHQL&#x60;) * Web Services Description Language (&#x60;WSDL&#x60;) * XML Schema (&#x60;XSD&#x60;) 
          * @param {string} [xRegistryVersion] Specifies the version number of this new version of the artifact content.  This would typically be a simple integer or a SemVer value.  It must be unique within the artifact.  If this is not provided, the server will generate a new, unique version number for this new updated content.
          * @param {string} [xRegistryName] Specifies the artifact name of this new version of the artifact content. Name must be ASCII-only string. If this is not provided, the server will extract the name from the artifact content.
          * @param {string} [xRegistryDescription] Specifies the artifact description of this new version of the artifact content. Description must be ASCII-only string. If this is not provided, the server will extract the description from the artifact content.
@@ -53,7 +54,7 @@ export const VersionsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createArtifactVersion: async (groupId: string, artifactId: string, body: any, xRegistryVersion?: string, xRegistryName?: string, xRegistryDescription?: string, xRegistryDescriptionEncoded?: string, xRegistryNameEncoded?: string, contentType?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        createArtifactVersion: async (groupId: string, artifactId: string, body: File, xRegistryVersion?: string, xRegistryName?: string, xRegistryDescription?: string, xRegistryDescriptionEncoded?: string, xRegistryNameEncoded?: string, contentType?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'groupId' is not null or undefined
             assertParamExists('createArtifactVersion', 'groupId', groupId)
             // verify required parameter 'artifactId' is not null or undefined
@@ -74,27 +75,27 @@ export const VersionsApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            if (xRegistryVersion !== undefined && xRegistryVersion !== null) {
+            if (xRegistryVersion != null) {
                 localVarHeaderParameter['X-Registry-Version'] = String(xRegistryVersion);
             }
 
-            if (xRegistryName !== undefined && xRegistryName !== null) {
+            if (xRegistryName != null) {
                 localVarHeaderParameter['X-Registry-Name'] = String(xRegistryName);
             }
 
-            if (xRegistryDescription !== undefined && xRegistryDescription !== null) {
+            if (xRegistryDescription != null) {
                 localVarHeaderParameter['X-Registry-Description'] = String(xRegistryDescription);
             }
 
-            if (xRegistryDescriptionEncoded !== undefined && xRegistryDescriptionEncoded !== null) {
+            if (xRegistryDescriptionEncoded != null) {
                 localVarHeaderParameter['X-Registry-Description-Encoded'] = String(xRegistryDescriptionEncoded);
             }
 
-            if (xRegistryNameEncoded !== undefined && xRegistryNameEncoded !== null) {
+            if (xRegistryNameEncoded != null) {
                 localVarHeaderParameter['X-Registry-Name-Encoded'] = String(xRegistryNameEncoded);
             }
 
-            if (contentType !== undefined && contentType !== null) {
+            if (contentType != null) {
                 localVarHeaderParameter['Content-Type'] = String(contentType);
             }
 
@@ -354,7 +355,7 @@ export const VersionsApiFp = function(configuration?: Configuration) {
          * @summary Create artifact version
          * @param {string} groupId The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
          * @param {string} artifactId The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
-         * @param {any} body The content of the artifact version being created or the content and a set of references to other artifacts. This is often, but not always, JSON data representing one of the supported artifact types:  * Avro (&#x60;AVRO&#x60;) * Protobuf (&#x60;PROTOBUF&#x60;) * JSON Schema (&#x60;JSON&#x60;) * Kafka Connect (&#x60;KCONNECT&#x60;) * OpenAPI (&#x60;OPENAPI&#x60;) * AsyncAPI (&#x60;ASYNCAPI&#x60;) * GraphQL (&#x60;GRAPHQL&#x60;) * Web Services Description Language (&#x60;WSDL&#x60;) * XML Schema (&#x60;XSD&#x60;) 
+         * @param {File} body The content of the artifact version being created or the content and a set of references to other artifacts. This is often, but not always, JSON data representing one of the supported artifact types:  * Avro (&#x60;AVRO&#x60;) * Protobuf (&#x60;PROTOBUF&#x60;) * JSON Schema (&#x60;JSON&#x60;) * Kafka Connect (&#x60;KCONNECT&#x60;) * OpenAPI (&#x60;OPENAPI&#x60;) * AsyncAPI (&#x60;ASYNCAPI&#x60;) * GraphQL (&#x60;GRAPHQL&#x60;) * Web Services Description Language (&#x60;WSDL&#x60;) * XML Schema (&#x60;XSD&#x60;) 
          * @param {string} [xRegistryVersion] Specifies the version number of this new version of the artifact content.  This would typically be a simple integer or a SemVer value.  It must be unique within the artifact.  If this is not provided, the server will generate a new, unique version number for this new updated content.
          * @param {string} [xRegistryName] Specifies the artifact name of this new version of the artifact content. Name must be ASCII-only string. If this is not provided, the server will extract the name from the artifact content.
          * @param {string} [xRegistryDescription] Specifies the artifact description of this new version of the artifact content. Description must be ASCII-only string. If this is not provided, the server will extract the description from the artifact content.
@@ -364,7 +365,7 @@ export const VersionsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createArtifactVersion(groupId: string, artifactId: string, body: any, xRegistryVersion?: string, xRegistryName?: string, xRegistryDescription?: string, xRegistryDescriptionEncoded?: string, xRegistryNameEncoded?: string, contentType?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VersionMetaData>> {
+        async createArtifactVersion(groupId: string, artifactId: string, body: File, xRegistryVersion?: string, xRegistryName?: string, xRegistryDescription?: string, xRegistryDescriptionEncoded?: string, xRegistryNameEncoded?: string, contentType?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VersionMetaData>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.createArtifactVersion(groupId, artifactId, body, xRegistryVersion, xRegistryName, xRegistryDescription, xRegistryDescriptionEncoded, xRegistryNameEncoded, contentType, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -391,7 +392,7 @@ export const VersionsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getArtifactVersion(groupId: string, artifactId: string, version: string, dereference?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
+        async getArtifactVersion(groupId: string, artifactId: string, version: string, dereference?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<File>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getArtifactVersion(groupId, artifactId, version, dereference, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -451,7 +452,7 @@ export const VersionsApiFactory = function (configuration?: Configuration, baseP
          * @summary Create artifact version
          * @param {string} groupId The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
          * @param {string} artifactId The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
-         * @param {any} body The content of the artifact version being created or the content and a set of references to other artifacts. This is often, but not always, JSON data representing one of the supported artifact types:  * Avro (&#x60;AVRO&#x60;) * Protobuf (&#x60;PROTOBUF&#x60;) * JSON Schema (&#x60;JSON&#x60;) * Kafka Connect (&#x60;KCONNECT&#x60;) * OpenAPI (&#x60;OPENAPI&#x60;) * AsyncAPI (&#x60;ASYNCAPI&#x60;) * GraphQL (&#x60;GRAPHQL&#x60;) * Web Services Description Language (&#x60;WSDL&#x60;) * XML Schema (&#x60;XSD&#x60;) 
+         * @param {File} body The content of the artifact version being created or the content and a set of references to other artifacts. This is often, but not always, JSON data representing one of the supported artifact types:  * Avro (&#x60;AVRO&#x60;) * Protobuf (&#x60;PROTOBUF&#x60;) * JSON Schema (&#x60;JSON&#x60;) * Kafka Connect (&#x60;KCONNECT&#x60;) * OpenAPI (&#x60;OPENAPI&#x60;) * AsyncAPI (&#x60;ASYNCAPI&#x60;) * GraphQL (&#x60;GRAPHQL&#x60;) * Web Services Description Language (&#x60;WSDL&#x60;) * XML Schema (&#x60;XSD&#x60;) 
          * @param {string} [xRegistryVersion] Specifies the version number of this new version of the artifact content.  This would typically be a simple integer or a SemVer value.  It must be unique within the artifact.  If this is not provided, the server will generate a new, unique version number for this new updated content.
          * @param {string} [xRegistryName] Specifies the artifact name of this new version of the artifact content. Name must be ASCII-only string. If this is not provided, the server will extract the name from the artifact content.
          * @param {string} [xRegistryDescription] Specifies the artifact description of this new version of the artifact content. Description must be ASCII-only string. If this is not provided, the server will extract the description from the artifact content.
@@ -461,7 +462,7 @@ export const VersionsApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createArtifactVersion(groupId: string, artifactId: string, body: any, xRegistryVersion?: string, xRegistryName?: string, xRegistryDescription?: string, xRegistryDescriptionEncoded?: string, xRegistryNameEncoded?: string, contentType?: string, options?: any): AxiosPromise<VersionMetaData> {
+        createArtifactVersion(groupId: string, artifactId: string, body: File, xRegistryVersion?: string, xRegistryName?: string, xRegistryDescription?: string, xRegistryDescriptionEncoded?: string, xRegistryNameEncoded?: string, contentType?: string, options?: any): AxiosPromise<VersionMetaData> {
             return localVarFp.createArtifactVersion(groupId, artifactId, body, xRegistryVersion, xRegistryName, xRegistryDescription, xRegistryDescriptionEncoded, xRegistryNameEncoded, contentType, options).then((request) => request(axios, basePath));
         },
         /**
@@ -486,7 +487,7 @@ export const VersionsApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getArtifactVersion(groupId: string, artifactId: string, version: string, dereference?: boolean, options?: any): AxiosPromise<any> {
+        getArtifactVersion(groupId: string, artifactId: string, version: string, dereference?: boolean, options?: any): AxiosPromise<File> {
             return localVarFp.getArtifactVersion(groupId, artifactId, version, dereference, options).then((request) => request(axios, basePath));
         },
         /**
@@ -541,7 +542,7 @@ export interface VersionsApiInterface {
      * @summary Create artifact version
      * @param {string} groupId The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
      * @param {string} artifactId The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
-     * @param {any} body The content of the artifact version being created or the content and a set of references to other artifacts. This is often, but not always, JSON data representing one of the supported artifact types:  * Avro (&#x60;AVRO&#x60;) * Protobuf (&#x60;PROTOBUF&#x60;) * JSON Schema (&#x60;JSON&#x60;) * Kafka Connect (&#x60;KCONNECT&#x60;) * OpenAPI (&#x60;OPENAPI&#x60;) * AsyncAPI (&#x60;ASYNCAPI&#x60;) * GraphQL (&#x60;GRAPHQL&#x60;) * Web Services Description Language (&#x60;WSDL&#x60;) * XML Schema (&#x60;XSD&#x60;) 
+     * @param {File} body The content of the artifact version being created or the content and a set of references to other artifacts. This is often, but not always, JSON data representing one of the supported artifact types:  * Avro (&#x60;AVRO&#x60;) * Protobuf (&#x60;PROTOBUF&#x60;) * JSON Schema (&#x60;JSON&#x60;) * Kafka Connect (&#x60;KCONNECT&#x60;) * OpenAPI (&#x60;OPENAPI&#x60;) * AsyncAPI (&#x60;ASYNCAPI&#x60;) * GraphQL (&#x60;GRAPHQL&#x60;) * Web Services Description Language (&#x60;WSDL&#x60;) * XML Schema (&#x60;XSD&#x60;) 
      * @param {string} [xRegistryVersion] Specifies the version number of this new version of the artifact content.  This would typically be a simple integer or a SemVer value.  It must be unique within the artifact.  If this is not provided, the server will generate a new, unique version number for this new updated content.
      * @param {string} [xRegistryName] Specifies the artifact name of this new version of the artifact content. Name must be ASCII-only string. If this is not provided, the server will extract the name from the artifact content.
      * @param {string} [xRegistryDescription] Specifies the artifact description of this new version of the artifact content. Description must be ASCII-only string. If this is not provided, the server will extract the description from the artifact content.
@@ -552,7 +553,7 @@ export interface VersionsApiInterface {
      * @throws {RequiredError}
      * @memberof VersionsApiInterface
      */
-    createArtifactVersion(groupId: string, artifactId: string, body: any, xRegistryVersion?: string, xRegistryName?: string, xRegistryDescription?: string, xRegistryDescriptionEncoded?: string, xRegistryNameEncoded?: string, contentType?: string, options?: AxiosRequestConfig): AxiosPromise<VersionMetaData>;
+    createArtifactVersion(groupId: string, artifactId: string, body: File, xRegistryVersion?: string, xRegistryName?: string, xRegistryDescription?: string, xRegistryDescriptionEncoded?: string, xRegistryNameEncoded?: string, contentType?: string, options?: AxiosRequestConfig): AxiosPromise<VersionMetaData>;
 
     /**
      * Deletes a single version of the artifact. Parameters `groupId`, `artifactId` and the unique `version` are needed. If this is the only version of the artifact, this operation is the same as  deleting the entire artifact.  This feature is disabled by default and it\'s discouraged for normal usage. To enable it, set the `registry.rest.artifact.deletion.enabled` property to true. This operation can fail for the following reasons:  * No artifact with this `artifactId` exists (HTTP error `404`) * No version with this `version` exists (HTTP error `404`)  * Feature is disabled (HTTP error `405`)  * A server error occurred (HTTP error `500`) 
@@ -577,7 +578,7 @@ export interface VersionsApiInterface {
      * @throws {RequiredError}
      * @memberof VersionsApiInterface
      */
-    getArtifactVersion(groupId: string, artifactId: string, version: string, dereference?: boolean, options?: AxiosRequestConfig): AxiosPromise<any>;
+    getArtifactVersion(groupId: string, artifactId: string, version: string, dereference?: boolean, options?: AxiosRequestConfig): AxiosPromise<File>;
 
     /**
      * Retrieves a single version of the artifact content.  Both the `artifactId` and the unique `version` number must be provided.  The `Content-Type` of the response depends  on the artifact type.  In most cases, this is `application/json`, but for some types  it may be different (for example, `PROTOBUF`).  This operation can fail for the following reasons:  * No artifact with this `artifactId` exists (HTTP error `404`) * No version with this `version` exists (HTTP error `404`) * A server error occurred (HTTP error `500`) 
@@ -631,7 +632,7 @@ export class VersionsApi extends BaseAPI implements VersionsApiInterface {
      * @summary Create artifact version
      * @param {string} groupId The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
      * @param {string} artifactId The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
-     * @param {any} body The content of the artifact version being created or the content and a set of references to other artifacts. This is often, but not always, JSON data representing one of the supported artifact types:  * Avro (&#x60;AVRO&#x60;) * Protobuf (&#x60;PROTOBUF&#x60;) * JSON Schema (&#x60;JSON&#x60;) * Kafka Connect (&#x60;KCONNECT&#x60;) * OpenAPI (&#x60;OPENAPI&#x60;) * AsyncAPI (&#x60;ASYNCAPI&#x60;) * GraphQL (&#x60;GRAPHQL&#x60;) * Web Services Description Language (&#x60;WSDL&#x60;) * XML Schema (&#x60;XSD&#x60;) 
+     * @param {File} body The content of the artifact version being created or the content and a set of references to other artifacts. This is often, but not always, JSON data representing one of the supported artifact types:  * Avro (&#x60;AVRO&#x60;) * Protobuf (&#x60;PROTOBUF&#x60;) * JSON Schema (&#x60;JSON&#x60;) * Kafka Connect (&#x60;KCONNECT&#x60;) * OpenAPI (&#x60;OPENAPI&#x60;) * AsyncAPI (&#x60;ASYNCAPI&#x60;) * GraphQL (&#x60;GRAPHQL&#x60;) * Web Services Description Language (&#x60;WSDL&#x60;) * XML Schema (&#x60;XSD&#x60;) 
      * @param {string} [xRegistryVersion] Specifies the version number of this new version of the artifact content.  This would typically be a simple integer or a SemVer value.  It must be unique within the artifact.  If this is not provided, the server will generate a new, unique version number for this new updated content.
      * @param {string} [xRegistryName] Specifies the artifact name of this new version of the artifact content. Name must be ASCII-only string. If this is not provided, the server will extract the name from the artifact content.
      * @param {string} [xRegistryDescription] Specifies the artifact description of this new version of the artifact content. Description must be ASCII-only string. If this is not provided, the server will extract the description from the artifact content.
@@ -642,7 +643,7 @@ export class VersionsApi extends BaseAPI implements VersionsApiInterface {
      * @throws {RequiredError}
      * @memberof VersionsApi
      */
-    public createArtifactVersion(groupId: string, artifactId: string, body: any, xRegistryVersion?: string, xRegistryName?: string, xRegistryDescription?: string, xRegistryDescriptionEncoded?: string, xRegistryNameEncoded?: string, contentType?: string, options?: AxiosRequestConfig) {
+    public createArtifactVersion(groupId: string, artifactId: string, body: File, xRegistryVersion?: string, xRegistryName?: string, xRegistryDescription?: string, xRegistryDescriptionEncoded?: string, xRegistryNameEncoded?: string, contentType?: string, options?: AxiosRequestConfig) {
         return VersionsApiFp(this.configuration).createArtifactVersion(groupId, artifactId, body, xRegistryVersion, xRegistryName, xRegistryDescription, xRegistryDescriptionEncoded, xRegistryNameEncoded, contentType, options).then((request) => request(this.axios, this.basePath));
     }
 

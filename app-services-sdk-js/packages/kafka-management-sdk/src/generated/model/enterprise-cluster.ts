@@ -13,9 +13,17 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
 import { EnterpriseClusterAllOf } from './enterprise-cluster-all-of';
+// May contain unused imports in some cases
+// @ts-ignore
 import { EnterpriseClusterAllOfCapacityInformation } from './enterprise-cluster-all-of-capacity-information';
+// May contain unused imports in some cases
+// @ts-ignore
 import { EnterpriseClusterListItem } from './enterprise-cluster-list-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import { SupportedKafkaInstanceTypesList } from './supported-kafka-instance-types-list';
 
 /**

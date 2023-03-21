@@ -13,8 +13,9 @@
  */
 
 
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
-import { Configuration } from '../configuration';
+import type { Configuration } from '../configuration';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -390,13 +391,13 @@ export const AdminApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * Imports registry data that was previously exported using the `/admin/export` operation.
          * @summary Import registry data
-         * @param {any} body The ZIP file representing the previously exported registry data.
+         * @param {File} body The ZIP file representing the previously exported registry data.
          * @param {boolean} [xRegistryPreserveGlobalId] If this header is set to false, global ids of imported data will be ignored and replaced by next id in global id sequence. This allows to import any data even thought the global ids would cause a conflict.
          * @param {boolean} [xRegistryPreserveContentId] If this header is set to false, content ids of imported data will be ignored and replaced by next id in content id sequence. The mapping between content and artifacts will be preserved. This allows to import any data even thought the content ids would cause a conflict.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        importData: async (body: any, xRegistryPreserveGlobalId?: boolean, xRegistryPreserveContentId?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        importData: async (body: File, xRegistryPreserveGlobalId?: boolean, xRegistryPreserveContentId?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'body' is not null or undefined
             assertParamExists('importData', 'body', body)
             const localVarPath = `/admin/import`;
@@ -411,12 +412,16 @@ export const AdminApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            if (xRegistryPreserveGlobalId !== undefined && xRegistryPreserveGlobalId !== null) {
-                localVarHeaderParameter['X-Registry-Preserve-GlobalId'] = String(JSON.stringify(xRegistryPreserveGlobalId));
+            if (xRegistryPreserveGlobalId != null) {
+                localVarHeaderParameter['X-Registry-Preserve-GlobalId'] = typeof xRegistryPreserveGlobalId === 'string' 
+                    ? xRegistryPreserveGlobalId 
+                    : JSON.stringify(xRegistryPreserveGlobalId);
             }
 
-            if (xRegistryPreserveContentId !== undefined && xRegistryPreserveContentId !== null) {
-                localVarHeaderParameter['X-Registry-Preserve-ContentId'] = String(JSON.stringify(xRegistryPreserveContentId));
+            if (xRegistryPreserveContentId != null) {
+                localVarHeaderParameter['X-Registry-Preserve-ContentId'] = typeof xRegistryPreserveContentId === 'string' 
+                    ? xRegistryPreserveContentId 
+                    : JSON.stringify(xRegistryPreserveContentId);
             }
 
 
@@ -882,7 +887,7 @@ export const AdminApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async exportData(forBrowser?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
+        async exportData(forBrowser?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<File>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.exportData(forBrowser, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -933,13 +938,13 @@ export const AdminApiFp = function(configuration?: Configuration) {
         /**
          * Imports registry data that was previously exported using the `/admin/export` operation.
          * @summary Import registry data
-         * @param {any} body The ZIP file representing the previously exported registry data.
+         * @param {File} body The ZIP file representing the previously exported registry data.
          * @param {boolean} [xRegistryPreserveGlobalId] If this header is set to false, global ids of imported data will be ignored and replaced by next id in global id sequence. This allows to import any data even thought the global ids would cause a conflict.
          * @param {boolean} [xRegistryPreserveContentId] If this header is set to false, content ids of imported data will be ignored and replaced by next id in content id sequence. The mapping between content and artifacts will be preserved. This allows to import any data even thought the content ids would cause a conflict.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async importData(body: any, xRegistryPreserveGlobalId?: boolean, xRegistryPreserveContentId?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async importData(body: File, xRegistryPreserveGlobalId?: boolean, xRegistryPreserveContentId?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.importData(body, xRegistryPreserveGlobalId, xRegistryPreserveContentId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -1129,7 +1134,7 @@ export const AdminApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportData(forBrowser?: boolean, options?: any): AxiosPromise<any> {
+        exportData(forBrowser?: boolean, options?: any): AxiosPromise<File> {
             return localVarFp.exportData(forBrowser, options).then((request) => request(axios, basePath));
         },
         /**
@@ -1175,13 +1180,13 @@ export const AdminApiFactory = function (configuration?: Configuration, basePath
         /**
          * Imports registry data that was previously exported using the `/admin/export` operation.
          * @summary Import registry data
-         * @param {any} body The ZIP file representing the previously exported registry data.
+         * @param {File} body The ZIP file representing the previously exported registry data.
          * @param {boolean} [xRegistryPreserveGlobalId] If this header is set to false, global ids of imported data will be ignored and replaced by next id in global id sequence. This allows to import any data even thought the global ids would cause a conflict.
          * @param {boolean} [xRegistryPreserveContentId] If this header is set to false, content ids of imported data will be ignored and replaced by next id in content id sequence. The mapping between content and artifacts will be preserved. This allows to import any data even thought the content ids would cause a conflict.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        importData(body: any, xRegistryPreserveGlobalId?: boolean, xRegistryPreserveContentId?: boolean, options?: any): AxiosPromise<void> {
+        importData(body: File, xRegistryPreserveGlobalId?: boolean, xRegistryPreserveContentId?: boolean, options?: any): AxiosPromise<void> {
             return localVarFp.importData(body, xRegistryPreserveGlobalId, xRegistryPreserveContentId, options).then((request) => request(axios, basePath));
         },
         /**
@@ -1359,7 +1364,7 @@ export interface AdminApiInterface {
      * @throws {RequiredError}
      * @memberof AdminApiInterface
      */
-    exportData(forBrowser?: boolean, options?: AxiosRequestConfig): AxiosPromise<any>;
+    exportData(forBrowser?: boolean, options?: AxiosRequestConfig): AxiosPromise<File>;
 
     /**
      * Returns the value of a single configuration property.  This operation may fail for one of the following reasons:  * Property not found or not configured (HTTP error `404`) * A server error occurred (HTTP error `500`) 
@@ -1404,14 +1409,14 @@ export interface AdminApiInterface {
     /**
      * Imports registry data that was previously exported using the `/admin/export` operation.
      * @summary Import registry data
-     * @param {any} body The ZIP file representing the previously exported registry data.
+     * @param {File} body The ZIP file representing the previously exported registry data.
      * @param {boolean} [xRegistryPreserveGlobalId] If this header is set to false, global ids of imported data will be ignored and replaced by next id in global id sequence. This allows to import any data even thought the global ids would cause a conflict.
      * @param {boolean} [xRegistryPreserveContentId] If this header is set to false, content ids of imported data will be ignored and replaced by next id in content id sequence. The mapping between content and artifacts will be preserved. This allows to import any data even thought the content ids would cause a conflict.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AdminApiInterface
      */
-    importData(body: any, xRegistryPreserveGlobalId?: boolean, xRegistryPreserveContentId?: boolean, options?: AxiosRequestConfig): AxiosPromise<void>;
+    importData(body: File, xRegistryPreserveGlobalId?: boolean, xRegistryPreserveContentId?: boolean, options?: AxiosRequestConfig): AxiosPromise<void>;
 
     /**
      * Gets a list of all the configured artifact types.  This operation can fail for the following reasons:  * A server error occurred (HTTP error `500`) 
@@ -1653,14 +1658,14 @@ export class AdminApi extends BaseAPI implements AdminApiInterface {
     /**
      * Imports registry data that was previously exported using the `/admin/export` operation.
      * @summary Import registry data
-     * @param {any} body The ZIP file representing the previously exported registry data.
+     * @param {File} body The ZIP file representing the previously exported registry data.
      * @param {boolean} [xRegistryPreserveGlobalId] If this header is set to false, global ids of imported data will be ignored and replaced by next id in global id sequence. This allows to import any data even thought the global ids would cause a conflict.
      * @param {boolean} [xRegistryPreserveContentId] If this header is set to false, content ids of imported data will be ignored and replaced by next id in content id sequence. The mapping between content and artifacts will be preserved. This allows to import any data even thought the content ids would cause a conflict.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AdminApi
      */
-    public importData(body: any, xRegistryPreserveGlobalId?: boolean, xRegistryPreserveContentId?: boolean, options?: AxiosRequestConfig) {
+    public importData(body: File, xRegistryPreserveGlobalId?: boolean, xRegistryPreserveContentId?: boolean, options?: AxiosRequestConfig) {
         return AdminApiFp(this.configuration).importData(body, xRegistryPreserveGlobalId, xRegistryPreserveContentId, options).then((request) => request(this.axios, this.basePath));
     }
 

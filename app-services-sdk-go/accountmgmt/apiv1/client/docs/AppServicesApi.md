@@ -26,14 +26,14 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AppServicesApi.ApiAccountsMgmtV1AccessTokenPost(context.Background()).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AppServicesApi.ApiAccountsMgmtV1AccessTokenPost(context.Background()).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AppServicesApi.ApiAccountsMgmtV1AccessTokenPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -85,15 +85,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     fetchLabels := true // bool | If true, includes the labels on a subscription/organization/account in the output. Could slow request response time. (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AppServicesApi.ApiAccountsMgmtV1CurrentAccountGet(context.Background()).FetchLabels(fetchLabels).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AppServicesApi.ApiAccountsMgmtV1CurrentAccountGet(context.Background()).FetchLabels(fetchLabels).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AppServicesApi.ApiAccountsMgmtV1CurrentAccountGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -149,7 +149,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -160,8 +160,8 @@ func main() {
     fetchCloudAccounts := true // bool | If true, includes the marketplace cloud accounts in the output. Could slow request response time. (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AppServicesApi.ApiAccountsMgmtV1OrganizationsOrgIdQuotaCostGet(context.Background(), orgId).Search(search).FetchRelatedResources(fetchRelatedResources).ForceRecalc(forceRecalc).FetchCloudAccounts(fetchCloudAccounts).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AppServicesApi.ApiAccountsMgmtV1OrganizationsOrgIdQuotaCostGet(context.Background(), orgId).Search(search).FetchRelatedResources(fetchRelatedResources).ForceRecalc(forceRecalc).FetchCloudAccounts(fetchCloudAccounts).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AppServicesApi.ApiAccountsMgmtV1OrganizationsOrgIdQuotaCostGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -225,15 +225,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     selfTermsReview := *openapiclient.NewSelfTermsReview() // SelfTermsReview | Data to check self terms for
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AppServicesApi.ApiAuthorizationsV1SelfTermsReviewPost(context.Background()).SelfTermsReview(selfTermsReview).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AppServicesApi.ApiAuthorizationsV1SelfTermsReviewPost(context.Background()).SelfTermsReview(selfTermsReview).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AppServicesApi.ApiAuthorizationsV1SelfTermsReviewPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)

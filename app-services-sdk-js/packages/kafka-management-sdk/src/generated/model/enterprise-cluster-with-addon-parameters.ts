@@ -13,8 +13,14 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
 import { EnterpriseClusterListItem } from './enterprise-cluster-list-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import { EnterpriseClusterWithAddonParametersAllOf } from './enterprise-cluster-with-addon-parameters-all-of';
+// May contain unused imports in some cases
+// @ts-ignore
 import { FleetshardParameter } from './fleetshard-parameter';
 
 /**
