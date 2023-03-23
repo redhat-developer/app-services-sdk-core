@@ -7,7 +7,7 @@
   <parent>
     <artifactId>app-services-sdk-java</artifactId>
     <groupId>com.redhat.cloud</groupId>
-    <version>999-SNAPSHOT</version>
+    <version>1.0.1</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
