@@ -1,6 +1,6 @@
 {
   "name": "@rhoas/kafka-management-sdk",
-  "version": "0.0.0",
+  "version": "1.0.2-beta1",
   "description": "RHOAS Kafka Management SDK",
   "author": "Red Hat Developers",
   "keywords": [
