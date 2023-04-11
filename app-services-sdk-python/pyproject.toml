@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rhoas_sdks"
-version = "0.1.0"
+version = "1.0.2"
 description = "A package which includes RHOAS SDKs"
 authors = ["dimakis <dsaridak@redhat.com>"]
 license = "Apache License"
