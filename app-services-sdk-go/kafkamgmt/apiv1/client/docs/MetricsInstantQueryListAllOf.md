@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Kind** | Pointer to **string** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
-**Items** | Pointer to [**[]InstantQuery**](InstantQuery.md) |  | [optional] 
+**Items** | Pointer to [**[]MetricsInstantQueryListAllOfItemsInner**](MetricsInstantQueryListAllOfItemsInner.md) |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasId returns a boolean if a field has been set.
 
 ### GetItems
 
-`func (o *MetricsInstantQueryListAllOf) GetItems() []InstantQuery`
+`func (o *MetricsInstantQueryListAllOf) GetItems() []MetricsInstantQueryListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *MetricsInstantQueryListAllOf) GetItemsOk() (*[]InstantQuery, bool)`
+`func (o *MetricsInstantQueryListAllOf) GetItemsOk() (*[]MetricsInstantQueryListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *MetricsInstantQueryListAllOf) SetItems(v []InstantQuery)`
+`func (o *MetricsInstantQueryListAllOf) SetItems(v []MetricsInstantQueryListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Kind** | **string** |  | 
-**Items** | [**[]ServiceAccountListItem**](ServiceAccountListItem.md) |  | 
+**Items** | [**[]ServiceAccountListAllOfItemsInner**](ServiceAccountListAllOfItemsInner.md) |  | 
 
 ## Methods
 
 ### NewServiceAccountList
 
-`func NewServiceAccountList(kind string, items []ServiceAccountListItem, ) *ServiceAccountList`
+`func NewServiceAccountList(kind string, items []ServiceAccountListAllOfItemsInner, ) *ServiceAccountList`
 
 NewServiceAccountList instantiates a new ServiceAccountList object
 This constructor will assign default values to properties that have it defined,
@@ -48,20 +48,20 @@ SetKind sets Kind field to given value.
 
 ### GetItems
 
-`func (o *ServiceAccountList) GetItems() []ServiceAccountListItem`
+`func (o *ServiceAccountList) GetItems() []ServiceAccountListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *ServiceAccountList) GetItemsOk() (*[]ServiceAccountListItem, bool)`
+`func (o *ServiceAccountList) GetItemsOk() (*[]ServiceAccountListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *ServiceAccountList) SetItems(v []ServiceAccountListItem)`
+`func (o *ServiceAccountList) SetItems(v []ServiceAccountListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]KafkaRequest**](KafkaRequest.md) |  | 
+**Items** | [**[]KafkaRequestListAllOfItemsInner**](KafkaRequestListAllOfItemsInner.md) |  | 
 
 ## Methods
 
 ### NewKafkaRequestListAllOf
 
-`func NewKafkaRequestListAllOf(items []KafkaRequest, ) *KafkaRequestListAllOf`
+`func NewKafkaRequestListAllOf(items []KafkaRequestListAllOfItemsInner, ) *KafkaRequestListAllOf`
 
 NewKafkaRequestListAllOf instantiates a new KafkaRequestListAllOf object
 This constructor will assign default values to properties that have it defined,
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *KafkaRequestListAllOf) GetItems() []KafkaRequest`
+`func (o *KafkaRequestListAllOf) GetItems() []KafkaRequestListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *KafkaRequestListAllOf) GetItemsOk() (*[]KafkaRequest, bool)`
+`func (o *KafkaRequestListAllOf) GetItemsOk() (*[]KafkaRequestListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *KafkaRequestListAllOf) SetItems(v []KafkaRequest)`
+`func (o *KafkaRequestListAllOf) SetItems(v []KafkaRequestListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

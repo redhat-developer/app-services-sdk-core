@@ -18,12 +18,15 @@ docs/AccountGroupAssignment.md
 docs/AccountGroupAssignmentAllOf.md
 docs/AccountGroupAssignmentList.md
 docs/AccountGroupAssignmentListAllOf.md
+docs/AccountGroupAssignmentListAllOfItemsInner.md
 docs/AccountGroupList.md
 docs/AccountGroupListAllOf.md
+docs/AccountGroupListAllOfItemsInner.md
 docs/AccountGroupRequest.md
 docs/AccountGroupRequestAllOf.md
 docs/AccountList.md
 docs/AccountListAllOf.md
+docs/AccountListAllOfItemsInner.md
 docs/AccountPatchRequest.md
 docs/AccountReference.md
 docs/AccountReferenceAllOf.md
@@ -51,6 +54,7 @@ docs/ClusterTransfer.md
 docs/ClusterTransferAllOf.md
 docs/ClusterTransferList.md
 docs/ClusterTransferListAllOf.md
+docs/ClusterTransferListAllOfItemsInner.md
 docs/ClusterTransferPatchRequest.md
 docs/ClusterTransferRequest.md
 docs/ClusterUpgrade.md
@@ -99,6 +103,7 @@ docs/Organization.md
 docs/OrganizationAllOf.md
 docs/OrganizationList.md
 docs/OrganizationListAllOf.md
+docs/OrganizationListAllOfItemsInner.md
 docs/OrganizationPatchRequest.md
 docs/Permission.md
 docs/PermissionAllOf.md
@@ -122,6 +127,7 @@ docs/QuotaRulesAllOf.md
 docs/QuotaRulesList.md
 docs/QuotaRulesListAllOf.md
 docs/Registry.md
+docs/RegistryAddressValue.md
 docs/RegistryAllOf.md
 docs/RegistryCreateRequest.md
 docs/RegistryCredential.md
@@ -217,12 +223,15 @@ model_account_group_assignment.go
 model_account_group_assignment_all_of.go
 model_account_group_assignment_list.go
 model_account_group_assignment_list_all_of.go
+model_account_group_assignment_list_all_of_items_inner.go
 model_account_group_list.go
 model_account_group_list_all_of.go
+model_account_group_list_all_of_items_inner.go
 model_account_group_request.go
 model_account_group_request_all_of.go
 model_account_list.go
 model_account_list_all_of.go
+model_account_list_all_of_items_inner.go
 model_account_patch_request.go
 model_account_reference.go
 model_account_reference_all_of.go
@@ -249,6 +258,7 @@ model_cluster_transfer.go
 model_cluster_transfer_all_of.go
 model_cluster_transfer_list.go
 model_cluster_transfer_list_all_of.go
+model_cluster_transfer_list_all_of_items_inner.go
 model_cluster_transfer_patch_request.go
 model_cluster_transfer_request.go
 model_cluster_upgrade.go
@@ -296,6 +306,7 @@ model_organization.go
 model_organization_all_of.go
 model_organization_list.go
 model_organization_list_all_of.go
+model_organization_list_all_of_items_inner.go
 model_organization_patch_request.go
 model_permission.go
 model_permission_all_of.go
@@ -319,6 +330,7 @@ model_quota_rules_all_of.go
 model_quota_rules_list.go
 model_quota_rules_list_all_of.go
 model_registry.go
+model_registry_address_value.go
 model_registry_all_of.go
 model_registry_create_request.go
 model_registry_credential.go
@@ -401,4 +413,6 @@ model_terms_review_response.go
 model_token_authorization_request.go
 model_token_authorization_response.go
 response.go
+test/api_app_services_test.go
+test/api_default_test.go
 utils.go

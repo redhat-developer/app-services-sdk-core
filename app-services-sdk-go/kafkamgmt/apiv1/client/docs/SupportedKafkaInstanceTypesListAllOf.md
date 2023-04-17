@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**InstanceTypes** | Pointer to [**[]SupportedKafkaInstanceType**](SupportedKafkaInstanceType.md) |  | [optional] 
+**InstanceTypes** | Pointer to [**[]SupportedKafkaInstanceTypesListAllOfInstanceTypesInner**](SupportedKafkaInstanceTypesListAllOfInstanceTypesInner.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetInstanceTypes
 
-`func (o *SupportedKafkaInstanceTypesListAllOf) GetInstanceTypes() []SupportedKafkaInstanceType`
+`func (o *SupportedKafkaInstanceTypesListAllOf) GetInstanceTypes() []SupportedKafkaInstanceTypesListAllOfInstanceTypesInner`
 
 GetInstanceTypes returns the InstanceTypes field if non-nil, zero value otherwise.
 
 ### GetInstanceTypesOk
 
-`func (o *SupportedKafkaInstanceTypesListAllOf) GetInstanceTypesOk() (*[]SupportedKafkaInstanceType, bool)`
+`func (o *SupportedKafkaInstanceTypesListAllOf) GetInstanceTypesOk() (*[]SupportedKafkaInstanceTypesListAllOfInstanceTypesInner, bool)`
 
 GetInstanceTypesOk returns a tuple with the InstanceTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInstanceTypes
 
-`func (o *SupportedKafkaInstanceTypesListAllOf) SetInstanceTypes(v []SupportedKafkaInstanceType)`
+`func (o *SupportedKafkaInstanceTypesListAllOf) SetInstanceTypes(v []SupportedKafkaInstanceTypesListAllOfInstanceTypesInner)`
 
 SetInstanceTypes sets InstanceTypes field to given value.
 

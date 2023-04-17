@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]AccountGroupAssignment**](AccountGroupAssignment.md) |  | [optional] 
+**Items** | Pointer to [**[]AccountGroupAssignmentListAllOfItemsInner**](AccountGroupAssignmentListAllOfItemsInner.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *AccountGroupAssignmentListAllOf) GetItems() []AccountGroupAssignment`
+`func (o *AccountGroupAssignmentListAllOf) GetItems() []AccountGroupAssignmentListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *AccountGroupAssignmentListAllOf) GetItemsOk() (*[]AccountGroupAssignment, bool)`
+`func (o *AccountGroupAssignmentListAllOf) GetItemsOk() (*[]AccountGroupAssignmentListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *AccountGroupAssignmentListAllOf) SetItems(v []AccountGroupAssignment)`
+`func (o *AccountGroupAssignmentListAllOf) SetItems(v []AccountGroupAssignmentListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

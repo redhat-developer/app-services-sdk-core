@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **Page** | **int32** |  | 
 **Size** | **int32** |  | 
 **Total** | **int32** |  | 
-**Items** | [**[]AccountGroup**](AccountGroup.md) |  | 
+**Items** | [**[]AccountGroupListAllOfItemsInner**](AccountGroupListAllOfItemsInner.md) |  | 
 
 ## Methods
 
 ### NewAccountGroupList
 
-`func NewAccountGroupList(kind string, page int32, size int32, total int32, items []AccountGroup, ) *AccountGroupList`
+`func NewAccountGroupList(kind string, page int32, size int32, total int32, items []AccountGroupListAllOfItemsInner, ) *AccountGroupList`
 
 NewAccountGroupList instantiates a new AccountGroupList object
 This constructor will assign default values to properties that have it defined,
@@ -111,20 +111,20 @@ SetTotal sets Total field to given value.
 
 ### GetItems
 
-`func (o *AccountGroupList) GetItems() []AccountGroup`
+`func (o *AccountGroupList) GetItems() []AccountGroupListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *AccountGroupList) GetItemsOk() (*[]AccountGroup, bool)`
+`func (o *AccountGroupList) GetItemsOk() (*[]AccountGroupListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *AccountGroupList) SetItems(v []AccountGroup)`
+`func (o *AccountGroupList) SetItems(v []AccountGroupListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

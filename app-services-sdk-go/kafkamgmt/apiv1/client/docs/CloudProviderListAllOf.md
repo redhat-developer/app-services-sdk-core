@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]CloudProvider**](CloudProvider.md) |  | 
+**Items** | [**[]CloudProviderListAllOfItemsInner**](CloudProviderListAllOfItemsInner.md) |  | 
 
 ## Methods
 
 ### NewCloudProviderListAllOf
 
-`func NewCloudProviderListAllOf(items []CloudProvider, ) *CloudProviderListAllOf`
+`func NewCloudProviderListAllOf(items []CloudProviderListAllOfItemsInner, ) *CloudProviderListAllOf`
 
 NewCloudProviderListAllOf instantiates a new CloudProviderListAllOf object
 This constructor will assign default values to properties that have it defined,
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *CloudProviderListAllOf) GetItems() []CloudProvider`
+`func (o *CloudProviderListAllOf) GetItems() []CloudProviderListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *CloudProviderListAllOf) GetItemsOk() (*[]CloudProvider, bool)`
+`func (o *CloudProviderListAllOf) GetItemsOk() (*[]CloudProviderListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *CloudProviderListAllOf) SetItems(v []CloudProvider)`
+`func (o *CloudProviderListAllOf) SetItems(v []CloudProviderListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

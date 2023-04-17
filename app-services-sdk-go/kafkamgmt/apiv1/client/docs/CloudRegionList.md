@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **Page** | **int32** |  | 
 **Size** | **int32** |  | 
 **Total** | **int32** |  | 
-**Items** | [**[]CloudRegion**](CloudRegion.md) |  | 
+**Items** | [**[]CloudRegionListAllOfItemsInner**](CloudRegionListAllOfItemsInner.md) |  | 
 
 ## Methods
 
 ### NewCloudRegionList
 
-`func NewCloudRegionList(kind string, page int32, size int32, total int32, items []CloudRegion, ) *CloudRegionList`
+`func NewCloudRegionList(kind string, page int32, size int32, total int32, items []CloudRegionListAllOfItemsInner, ) *CloudRegionList`
 
 NewCloudRegionList instantiates a new CloudRegionList object
 This constructor will assign default values to properties that have it defined,
@@ -111,20 +111,20 @@ SetTotal sets Total field to given value.
 
 ### GetItems
 
-`func (o *CloudRegionList) GetItems() []CloudRegion`
+`func (o *CloudRegionList) GetItems() []CloudRegionListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *CloudRegionList) GetItemsOk() (*[]CloudRegion, bool)`
+`func (o *CloudRegionList) GetItemsOk() (*[]CloudRegionListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *CloudRegionList) SetItems(v []CloudRegion)`
+`func (o *CloudRegionList) SetItems(v []CloudRegionListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

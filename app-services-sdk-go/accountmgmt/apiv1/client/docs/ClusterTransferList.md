@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **Page** | **int32** |  | 
 **Size** | **int32** |  | 
 **Total** | **int32** |  | 
-**Items** | [**[]ClusterTransfer**](ClusterTransfer.md) |  | 
+**Items** | [**[]ClusterTransferListAllOfItemsInner**](ClusterTransferListAllOfItemsInner.md) |  | 
 
 ## Methods
 
 ### NewClusterTransferList
 
-`func NewClusterTransferList(kind string, page int32, size int32, total int32, items []ClusterTransfer, ) *ClusterTransferList`
+`func NewClusterTransferList(kind string, page int32, size int32, total int32, items []ClusterTransferListAllOfItemsInner, ) *ClusterTransferList`
 
 NewClusterTransferList instantiates a new ClusterTransferList object
 This constructor will assign default values to properties that have it defined,
@@ -111,20 +111,20 @@ SetTotal sets Total field to given value.
 
 ### GetItems
 
-`func (o *ClusterTransferList) GetItems() []ClusterTransfer`
+`func (o *ClusterTransferList) GetItems() []ClusterTransferListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *ClusterTransferList) GetItemsOk() (*[]ClusterTransfer, bool)`
+`func (o *ClusterTransferList) GetItemsOk() (*[]ClusterTransferListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *ClusterTransferList) SetItems(v []ClusterTransfer)`
+`func (o *ClusterTransferList) SetItems(v []ClusterTransferListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

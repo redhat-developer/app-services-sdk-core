@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **Page** | **int32** |  | 
 **Size** | **int32** |  | 
 **Total** | **int32** |  | 
-**Items** | [**[]AccountGroupAssignment**](AccountGroupAssignment.md) |  | 
+**Items** | [**[]AccountGroupAssignmentListAllOfItemsInner**](AccountGroupAssignmentListAllOfItemsInner.md) |  | 
 
 ## Methods
 
 ### NewAccountGroupAssignmentList
 
-`func NewAccountGroupAssignmentList(kind string, page int32, size int32, total int32, items []AccountGroupAssignment, ) *AccountGroupAssignmentList`
+`func NewAccountGroupAssignmentList(kind string, page int32, size int32, total int32, items []AccountGroupAssignmentListAllOfItemsInner, ) *AccountGroupAssignmentList`
 
 NewAccountGroupAssignmentList instantiates a new AccountGroupAssignmentList object
 This constructor will assign default values to properties that have it defined,
@@ -111,20 +111,20 @@ SetTotal sets Total field to given value.
 
 ### GetItems
 
-`func (o *AccountGroupAssignmentList) GetItems() []AccountGroupAssignment`
+`func (o *AccountGroupAssignmentList) GetItems() []AccountGroupAssignmentListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *AccountGroupAssignmentList) GetItemsOk() (*[]AccountGroupAssignment, bool)`
+`func (o *AccountGroupAssignmentList) GetItemsOk() (*[]AccountGroupAssignmentListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *AccountGroupAssignmentList) SetItems(v []AccountGroupAssignment)`
+`func (o *AccountGroupAssignmentList) SetItems(v []AccountGroupAssignmentListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

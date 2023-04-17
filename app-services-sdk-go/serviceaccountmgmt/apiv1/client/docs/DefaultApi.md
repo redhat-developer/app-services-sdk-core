@@ -24,15 +24,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     id := "id_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetAuthenticationPolicy(context.Background(), id).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetAuthenticationPolicy(context.Background(), id).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetAuthenticationPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[authFlow](../README.md#authFlow), [bearerAuth](../README.md#bearerAuth), [serviceAccounts](../README.md#serviceAccounts)
+[serviceAccounts](../README.md#serviceAccounts), [bearerAuth](../README.md#bearerAuth), [authFlow](../README.md#authFlow)
 
 ### HTTP request headers
 
@@ -92,7 +92,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -100,8 +100,8 @@ func main() {
     authenticationPolicy := *openapiclient.NewAuthenticationPolicy() // AuthenticationPolicy |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.SetAuthenticationPolicy(context.Background(), id).AuthenticationPolicy(authenticationPolicy).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.SetAuthenticationPolicy(context.Background(), id).AuthenticationPolicy(authenticationPolicy).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.SetAuthenticationPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[authFlow](../README.md#authFlow), [bearerAuth](../README.md#bearerAuth), [serviceAccounts](../README.md#serviceAccounts)
+[serviceAccounts](../README.md#serviceAccounts), [bearerAuth](../README.md#bearerAuth), [authFlow](../README.md#authFlow)
 
 ### HTTP request headers
 

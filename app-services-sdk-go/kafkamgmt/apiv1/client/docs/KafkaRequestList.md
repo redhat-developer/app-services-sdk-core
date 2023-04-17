@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **Page** | **int32** |  | 
 **Size** | **int32** |  | 
 **Total** | **int32** |  | 
-**Items** | [**[]KafkaRequest**](KafkaRequest.md) |  | 
+**Items** | [**[]KafkaRequestListAllOfItemsInner**](KafkaRequestListAllOfItemsInner.md) |  | 
 
 ## Methods
 
 ### NewKafkaRequestList
 
-`func NewKafkaRequestList(kind string, page int32, size int32, total int32, items []KafkaRequest, ) *KafkaRequestList`
+`func NewKafkaRequestList(kind string, page int32, size int32, total int32, items []KafkaRequestListAllOfItemsInner, ) *KafkaRequestList`
 
 NewKafkaRequestList instantiates a new KafkaRequestList object
 This constructor will assign default values to properties that have it defined,
@@ -111,20 +111,20 @@ SetTotal sets Total field to given value.
 
 ### GetItems
 
-`func (o *KafkaRequestList) GetItems() []KafkaRequest`
+`func (o *KafkaRequestList) GetItems() []KafkaRequestListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *KafkaRequestList) GetItemsOk() (*[]KafkaRequest, bool)`
+`func (o *KafkaRequestList) GetItemsOk() (*[]KafkaRequestListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *KafkaRequestList) SetItems(v []KafkaRequest)`
+`func (o *KafkaRequestList) SetItems(v []KafkaRequestListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

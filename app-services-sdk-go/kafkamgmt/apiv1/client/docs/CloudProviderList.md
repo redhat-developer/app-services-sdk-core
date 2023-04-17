@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **Page** | **int32** |  | 
 **Size** | **int32** |  | 
 **Total** | **int32** |  | 
-**Items** | [**[]CloudProvider**](CloudProvider.md) |  | 
+**Items** | [**[]CloudProviderListAllOfItemsInner**](CloudProviderListAllOfItemsInner.md) |  | 
 
 ## Methods
 
 ### NewCloudProviderList
 
-`func NewCloudProviderList(kind string, page int32, size int32, total int32, items []CloudProvider, ) *CloudProviderList`
+`func NewCloudProviderList(kind string, page int32, size int32, total int32, items []CloudProviderListAllOfItemsInner, ) *CloudProviderList`
 
 NewCloudProviderList instantiates a new CloudProviderList object
 This constructor will assign default values to properties that have it defined,
@@ -111,20 +111,20 @@ SetTotal sets Total field to given value.
 
 ### GetItems
 
-`func (o *CloudProviderList) GetItems() []CloudProvider`
+`func (o *CloudProviderList) GetItems() []CloudProviderListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *CloudProviderList) GetItemsOk() (*[]CloudProvider, bool)`
+`func (o *CloudProviderList) GetItemsOk() (*[]CloudProviderListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *CloudProviderList) SetItems(v []CloudProvider)`
+`func (o *CloudProviderList) SetItems(v []CloudProviderListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

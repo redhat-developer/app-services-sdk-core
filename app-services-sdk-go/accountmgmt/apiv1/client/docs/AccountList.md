@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **Page** | **int32** |  | 
 **Size** | **int32** |  | 
 **Total** | **int32** |  | 
-**Items** | [**[]Account**](Account.md) |  | 
+**Items** | [**[]AccountListAllOfItemsInner**](AccountListAllOfItemsInner.md) |  | 
 
 ## Methods
 
 ### NewAccountList
 
-`func NewAccountList(kind string, page int32, size int32, total int32, items []Account, ) *AccountList`
+`func NewAccountList(kind string, page int32, size int32, total int32, items []AccountListAllOfItemsInner, ) *AccountList`
 
 NewAccountList instantiates a new AccountList object
 This constructor will assign default values to properties that have it defined,
@@ -111,20 +111,20 @@ SetTotal sets Total field to given value.
 
 ### GetItems
 
-`func (o *AccountList) GetItems() []Account`
+`func (o *AccountList) GetItems() []AccountListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *AccountList) GetItemsOk() (*[]Account, bool)`
+`func (o *AccountList) GetItemsOk() (*[]AccountListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *AccountList) SetItems(v []Account)`
+`func (o *AccountList) SetItems(v []AccountListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

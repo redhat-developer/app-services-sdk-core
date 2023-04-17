@@ -30,15 +30,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     serviceAccountCreateRequestData := *openapiclient.NewServiceAccountCreateRequestData("Name_example") // ServiceAccountCreateRequestData | 'name' and 'description' of the service account
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ServiceAccountsApi.CreateServiceAccount(context.Background()).ServiceAccountCreateRequestData(serviceAccountCreateRequestData).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ServiceAccountsApi.CreateServiceAccount(context.Background()).ServiceAccountCreateRequestData(serviceAccountCreateRequestData).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ServiceAccountsApi.CreateServiceAccount``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[authFlow](../README.md#authFlow), [serviceAccounts](../README.md#serviceAccounts)
+[serviceAccounts](../README.md#serviceAccounts), [authFlow](../README.md#authFlow)
 
 ### HTTP request headers
 
@@ -96,15 +96,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     id := "id_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ServiceAccountsApi.DeleteServiceAccount(context.Background(), id).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    r, err := apiClient.ServiceAccountsApi.DeleteServiceAccount(context.Background(), id).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ServiceAccountsApi.DeleteServiceAccount``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[authFlow](../README.md#authFlow), [serviceAccounts](../README.md#serviceAccounts)
+[serviceAccounts](../README.md#serviceAccounts), [authFlow](../README.md#authFlow)
 
 ### HTTP request headers
 
@@ -164,15 +164,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     id := "id_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ServiceAccountsApi.GetServiceAccount(context.Background(), id).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ServiceAccountsApi.GetServiceAccount(context.Background(), id).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ServiceAccountsApi.GetServiceAccount``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[authFlow](../README.md#authFlow), [serviceAccounts](../README.md#serviceAccounts)
+[serviceAccounts](../README.md#serviceAccounts), [authFlow](../README.md#authFlow)
 
 ### HTTP request headers
 
@@ -234,7 +234,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -243,8 +243,8 @@ func main() {
     clientId := []string{"Inner_example"} // []string |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ServiceAccountsApi.GetServiceAccounts(context.Background()).First(first).Max(max).ClientId(clientId).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ServiceAccountsApi.GetServiceAccounts(context.Background()).First(first).Max(max).ClientId(clientId).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ServiceAccountsApi.GetServiceAccounts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[authFlow](../README.md#authFlow), [serviceAccounts](../README.md#serviceAccounts)
+[serviceAccounts](../README.md#serviceAccounts), [authFlow](../README.md#authFlow)
 
 ### HTTP request headers
 
@@ -304,15 +304,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     id := "id_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ServiceAccountsApi.ResetServiceAccountSecret(context.Background(), id).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ServiceAccountsApi.ResetServiceAccountSecret(context.Background(), id).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ServiceAccountsApi.ResetServiceAccountSecret``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[authFlow](../README.md#authFlow), [serviceAccounts](../README.md#serviceAccounts)
+[serviceAccounts](../README.md#serviceAccounts), [authFlow](../README.md#authFlow)
 
 ### HTTP request headers
 
@@ -374,7 +374,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -382,8 +382,8 @@ func main() {
     serviceAccountRequestData := *openapiclient.NewServiceAccountRequestData() // ServiceAccountRequestData | 'name' and 'description' of the service account
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ServiceAccountsApi.UpdateServiceAccount(context.Background(), id).ServiceAccountRequestData(serviceAccountRequestData).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ServiceAccountsApi.UpdateServiceAccount(context.Background(), id).ServiceAccountRequestData(serviceAccountRequestData).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ServiceAccountsApi.UpdateServiceAccount``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -417,7 +417,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[authFlow](../README.md#authFlow), [serviceAccounts](../README.md#serviceAccounts)
+[serviceAccounts](../README.md#serviceAccounts), [authFlow](../README.md#authFlow)
 
 ### HTTP request headers
 

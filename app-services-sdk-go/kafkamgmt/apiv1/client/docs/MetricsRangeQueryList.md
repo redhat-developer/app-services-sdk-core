@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Kind** | Pointer to **string** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
-**Items** | Pointer to [**[]RangeQuery**](RangeQuery.md) |  | [optional] 
+**Items** | Pointer to [**[]MetricsRangeQueryListAllOfItemsInner**](MetricsRangeQueryListAllOfItemsInner.md) |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasId returns a boolean if a field has been set.
 
 ### GetItems
 
-`func (o *MetricsRangeQueryList) GetItems() []RangeQuery`
+`func (o *MetricsRangeQueryList) GetItems() []MetricsRangeQueryListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *MetricsRangeQueryList) GetItemsOk() (*[]RangeQuery, bool)`
+`func (o *MetricsRangeQueryList) GetItemsOk() (*[]MetricsRangeQueryListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *MetricsRangeQueryList) SetItems(v []RangeQuery)`
+`func (o *MetricsRangeQueryList) SetItems(v []MetricsRangeQueryListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

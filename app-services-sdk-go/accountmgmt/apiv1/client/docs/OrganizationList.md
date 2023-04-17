@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **Page** | **int32** |  | 
 **Size** | **int32** |  | 
 **Total** | **int32** |  | 
-**Items** | [**[]Organization**](Organization.md) |  | 
+**Items** | [**[]OrganizationListAllOfItemsInner**](OrganizationListAllOfItemsInner.md) |  | 
 
 ## Methods
 
 ### NewOrganizationList
 
-`func NewOrganizationList(kind string, page int32, size int32, total int32, items []Organization, ) *OrganizationList`
+`func NewOrganizationList(kind string, page int32, size int32, total int32, items []OrganizationListAllOfItemsInner, ) *OrganizationList`
 
 NewOrganizationList instantiates a new OrganizationList object
 This constructor will assign default values to properties that have it defined,
@@ -111,20 +111,20 @@ SetTotal sets Total field to given value.
 
 ### GetItems
 
-`func (o *OrganizationList) GetItems() []Organization`
+`func (o *OrganizationList) GetItems() []OrganizationListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *OrganizationList) GetItemsOk() (*[]Organization, bool)`
+`func (o *OrganizationList) GetItemsOk() (*[]OrganizationListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *OrganizationList) SetItems(v []Organization)`
+`func (o *OrganizationList) SetItems(v []OrganizationListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

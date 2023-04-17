@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]Account**](Account.md) |  | [optional] 
+**Items** | Pointer to [**[]AccountListAllOfItemsInner**](AccountListAllOfItemsInner.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *AccountListAllOf) GetItems() []Account`
+`func (o *AccountListAllOf) GetItems() []AccountListAllOfItemsInner`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *AccountListAllOf) GetItemsOk() (*[]Account, bool)`
+`func (o *AccountListAllOf) GetItemsOk() (*[]AccountListAllOfItemsInner, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *AccountListAllOf) SetItems(v []Account)`
+`func (o *AccountListAllOf) SetItems(v []AccountListAllOfItemsInner)`
 
 SetItems sets Items field to given value.
 

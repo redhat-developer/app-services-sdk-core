@@ -24,15 +24,15 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
     errorId := "errorId_example" // string | Error identifier
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ErrorsApi.GetError(context.Background(), errorId).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ErrorsApi.GetError(context.Background(), errorId).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ErrorsApi.GetError``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -92,14 +92,14 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ErrorsApi.GetErrors(context.Background()).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ErrorsApi.GetErrors(context.Background()).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ErrorsApi.GetErrors``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -124,7 +124,7 @@ Other parameters are passed through a pointer to a apiGetErrorsRequest struct vi
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 

@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -39,8 +39,8 @@ func main() {
     timestamp := TODO // interface{} | Retrieve messages with a timestamp equal to or later than this timestamp. If both `timestamp` and `offset` are requested, `timestamp` is given preference. (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.RecordsApi.ConsumeRecords(context.Background(), topicName).Include(include).Limit(limit).MaxValueLength(maxValueLength).Offset(offset).Partition(partition).Timestamp(timestamp).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.RecordsApi.ConsumeRecords(context.Background(), topicName).Include(include).Limit(limit).MaxValueLength(maxValueLength).Offset(offset).Partition(partition).Timestamp(timestamp).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `RecordsApi.ConsumeRecords``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -108,7 +108,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
@@ -116,8 +116,8 @@ func main() {
     record := *openapiclient.NewRecord("Value_example") // Record | 
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.RecordsApi.ProduceRecord(context.Background(), topicName).Record(record).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.RecordsApi.ProduceRecord(context.Background(), topicName).Record(record).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `RecordsApi.ProduceRecord``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [OAuth2](../README.md#OAuth2)
+[OAuth2](../README.md#OAuth2), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
