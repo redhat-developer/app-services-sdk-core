@@ -11,7 +11,7 @@ on:
         required: true
         default: 'main'
       prerelease:
-        description: 'Indicate wheater this is a pre-release'
+        description: 'Indicate whether this is a pre-release'
         default: false
         type: boolean
 
