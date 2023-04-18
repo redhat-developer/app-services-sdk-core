@@ -25,9 +25,9 @@
     <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
     <maven-javadoc-plugin.version>3.5.0</maven-javadoc-plugin.version>
 
-    <kiota.utils.version>0.0.1</kiota.utils.version>
-    <kiota.library.version>0.2.1</kiota.library.version>
-    <findbugs.version>3.0.0</findbugs.version>
+    <kiota.utils.version>0.0.4</kiota.utils.version>
+    <kiota.library.version>0.4.2</kiota.library.version>
+    <findbugs.version>3.0.2</findbugs.version>
 
     <junit.version>5.9.2</junit.version>
 
