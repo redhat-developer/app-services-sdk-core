@@ -23,12 +23,12 @@ compile-requirements:
 .PHONY: generate-sdk
 generate-sdk:
 	kiota generate -l python -d ../.openapi/connector_mgmt.yaml -o ./connector_mgmt_sdk --co
-	kiota generate -l python -d ../.openapi/kafka-admin-rest.yaml -o ./kafka-instance-sdk --co
+	kiota generate -l python -d ../.openapi/kafka-admin-rest.yaml -o ./kafka_instance_sdk --co
 	kiota generate -l python -d ../.openapi/srs-fleet-manager.json -o ./registry_mgmt_sdk --co
 	kiota generate -l python -d ../.openapi/kafka-admin-rest.yaml -o ./kafka_mgmt_sdk --co
 	kiota generate -l python -d ../.openapi/registry-instance.json -o ./registry_instance_sdk --co
 	kiota generate -l python -d ../.openapi/smartevents_mgmt_v2.yaml -o ./smart_events_mgmt_sdk --co
-	kiota generate -l python -d ../.openapi/service-accounts.yaml -o ./service_accounts-mgmt_sdk --co
+	kiota generate -l python -d ../.openapi/service-accounts.yaml -o ./service_accounts_mgmt_sdk --co
 
 # The staggered make target explanations are printed correctly (not staggered) to the console.
 .PHONY: help

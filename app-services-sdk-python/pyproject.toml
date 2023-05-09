@@ -2,24 +2,26 @@
 name = "rhoas_sdks"
 version = "0.1.0"
 description = "A package which includes RHOAS SDKs"
-authors = ["dimakis <dsaridak@redhat.com>"]
+authors = ["jackdelahunt <jdelahun@redhat.com>"]
 license = "Apache License"
 readme = "docs/README.md"
 packages = [
-    { include = "rhoas_connector_mgmt_sdk", from = "connector_mgmt_sdk/" },
-    { include = "rhoas_kafka_instance_sdk", from = "kafka_instance_sdk/"},
-    { include = "rhoas_service_registry_mgmt_sdk", from = "registry_mgmt_sdk/"},
-    { include = "rhoas_kafka_mgmt_sdk", from = "kafka_mgmt_sdk/"},
-    { include = "rhoas_registry_instance_sdk", from = "registry_instance_sdk/"},
-    { include = "rhoas_smart_events_mgmt_sdk", from = "smart_events_mgmt_sdk/"},
-    { include = "rhoas_service_accounts_mgmt_sdk", from = "service_accounts_mgmt_sdk" },
+    { include = "connector_mgmt_sdk/" },
+    { include = "kafka_instance_sdk/"},
+    { include = "registry_mgmt_sdk/"},
+    { include = "kafka_mgmt_sdk/"},
+    { include = "registry_instance_sdk/"},
+    { include = "smart_events_mgmt_sdk/"},
+    { include = "service_accounts_mgmt_sdk" },
     { include = "auth"}
 ]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-urllib3 = "^1.25.3"
-python-dateutil = "*"
+microsoft-kiota-abstractions = "*"
+microsoft-kiota-http = "*"
+microsoft-kiota-serialization-json = "*"
+microsoft-kiota-serialization-text = "*"
 python-keycloak = "^2.5.0"
 
 [tool.poetry.dev-dependencies]

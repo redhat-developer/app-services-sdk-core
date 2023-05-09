@@ -84,7 +84,7 @@ jobs:
           git config user.email ci-bot@andreatp.
 
       # Python SDK
-      - name: Update Pytohn to new version
+      - name: Update Python to new version
         working-directory: app-services-sdk-python
         run: poetry version ${{ github.event.inputs.release-version }}
         
