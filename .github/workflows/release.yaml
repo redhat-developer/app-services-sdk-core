@@ -60,6 +60,11 @@ jobs:
           gpg --list-secret-keys --keyid-format LONG
 
       # Python SDK
+      - name: Generate Python SDK
+        working-directory: app-services-sdk-python
+        run: make generate-sdk
+
+      # Python SDK
       - name: Install Poetry
         working-directory: app-services-sdk-python
         run: make install-setup
